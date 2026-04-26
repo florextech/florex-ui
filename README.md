@@ -8,7 +8,24 @@ Florex Labs shared UI library — dark-first React components and design tokens 
 pnpm add @florex/ui
 # peer deps
 pnpm add react react-dom tailwindcss
+# icons (recommended)
+pnpm add @phosphor-icons/react
 ```
+
+## Icons
+
+Florex UI uses [Phosphor Icons](https://phosphoricons.com/) as the recommended icon library. Phosphor provides 9,000+ icons in 6 weights (thin, light, regular, bold, fill, duotone) that match the Florex design system.
+
+```tsx
+import { Gear, Plus, TrashSimple, Warning } from "@phosphor-icons/react";
+import { Button, IconButton, Alert } from "@florex/ui";
+
+<Button><Plus size={16} weight="bold" /> Create Bot</Button>
+<IconButton icon={<Gear size={18} />} aria-label="Settings" variant="ghost" />
+<Alert variant="warning" icon={<Warning size={18} />}>Check your config</Alert>
+```
+
+Phosphor is an optional peer dependency — you can use any icon library, but Phosphor is what all Florex Labs projects standardize on.
 
 ## Setup
 
