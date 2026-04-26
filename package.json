@@ -1,6 +1,6 @@
 {
   "name": "@florexlabs/ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dark-first React component library by Florex Labs — 46+ accessible components, design tokens, and Tailwind CSS v4 integration for building modern web applications.",
   "type": "module",
   "main": "./dist/index.cjs",
