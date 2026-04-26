@@ -37,4 +37,20 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 );
 Card.displayName = "Card";
 
-export { Card, cardVariants, type CardProps };
+function CardHeader({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("space-y-1.5 p-5", className)} {...props} />;
+}
+
+function CardTitle({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) {
+  return <h3 className={cn("text-lg font-semibold tracking-tight text-[var(--foreground)]", className)} {...props} />;
+}
+
+function CardDescription({ className, ...props }: HTMLAttributes<HTMLParagraphElement>) {
+  return <p className={cn("text-sm text-[var(--muted)]", className)} {...props} />;
+}
+
+function CardContent({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("p-5 pt-0", className)} {...props} />;
+}
+
+export { Card, cardVariants, CardHeader, CardTitle, CardDescription, CardContent, type CardProps };
