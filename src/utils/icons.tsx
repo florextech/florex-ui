@@ -3,13 +3,16 @@ import { type ComponentType, type ReactNode, createElement } from "react";
 type IconComponent = ComponentType<{ size?: number; weight?: string; className?: string }>;
 type IconProps = Readonly<{ size?: number; className?: string }>;
 
-let _phosphor: Record<string, IconComponent> | null | undefined;
+let _loaded = false;
+let _phosphor: Record<string, IconComponent> | null = null;
 
 function getPhosphor(): Record<string, IconComponent> | null {
-  if (_phosphor !== undefined) return _phosphor;
+  if (_loaded) return _phosphor;
+  _loaded = true;
   try {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    _phosphor = globalThis.require?.("@phosphor-icons/react") ?? null;
+    const r = typeof require === "function" ? require : null;
+    _phosphor = r ? (r("@phosphor-icons/react") as Record<string, IconComponent>) : null;
   } catch {
     _phosphor = null;
   }
