@@ -21,6 +21,9 @@ importers:
         specifier: '>=4'
         version: 4.2.4
     devDependencies:
+      '@eslint/js':
+        specifier: 9.25.1
+        version: 9.25.1
       '@phosphor-icons/react':
         specifier: 2.1.7
         version: 2.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
