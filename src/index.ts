@@ -14,7 +14,7 @@ export { Text, textVariants, type TextProps } from "./components/Text/Text";
 export { Alert, alertVariants, type AlertProps } from "./components/Alert/Alert";
 export { Switch, type SwitchProps } from "./components/Switch/Switch";
 export { Label, type LabelProps } from "./components/Label/Label";
-export { Select, type SelectProps } from "./components/Select/Select";
+export { Select, type SelectProps, type SelectOption } from "./components/Select/Select";
 export { FormMessage, type FormMessageProps } from "./components/FormMessage/FormMessage";
 export { Avatar, type AvatarProps } from "./components/Avatar/Avatar";
 export { Tooltip, type TooltipProps } from "./components/Tooltip/Tooltip";
