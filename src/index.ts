@@ -7,6 +7,12 @@ export { Badge, badgeVariants, type BadgeProps } from "./components/Badge/Badge"
 export { Modal, type ModalProps } from "./components/Modal/Modal";
 export { EmptyState, type EmptyStateProps } from "./components/EmptyState/EmptyState";
 export { Spinner, type SpinnerProps } from "./components/Spinner/Spinner";
+export { Tabs, TabsList, TabsTrigger, TabsContent, type TabsProps, type TabsListProps, type TabsTriggerProps, type TabsContentProps } from "./components/Tabs/Tabs";
+export { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "./components/Table/Table";
+export { Divider, type DividerProps } from "./components/Divider/Divider";
+export { Text, textVariants, type TextProps } from "./components/Text/Text";
+export { Alert, alertVariants, type AlertProps } from "./components/Alert/Alert";
+export { Switch, type SwitchProps } from "./components/Switch/Switch";
 
 // Layouts
 export { Container, type ContainerProps } from "./layouts/Container/Container";
