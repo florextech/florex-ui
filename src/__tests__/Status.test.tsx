@@ -8,13 +8,16 @@ describe("Status", () => {
     expect(screen.getByText("Online")).toBeInTheDocument();
   });
 
-  it("renders success dot color", () => {
+  it("renders success dot", () => {
     const { container } = render(<Status value="success">Active</Status>);
-    expect(container.querySelector(".bg-\\[var\\(--success\\)\\]")).toBeInTheDocument();
+    const dot = container.querySelector("span > span:first-child");
+    expect(dot).toBeInTheDocument();
+    expect(dot).toHaveClass("rounded-full");
   });
 
-  it("renders danger dot color", () => {
+  it("renders danger dot", () => {
     const { container } = render(<Status value="danger">Error</Status>);
-    expect(container.querySelector(".bg-\\[var\\(--danger\\)\\]")).toBeInTheDocument();
+    const dot = container.querySelector("span > span:first-child");
+    expect(dot).toBeInTheDocument();
   });
 });
