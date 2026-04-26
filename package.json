@@ -1,5 +1,5 @@
 {
-  "name": "@florex/ui",
+  "name": "@florexlabs/ui",
   "version": "0.1.0",
   "description": "Florex Labs shared UI library — dark-first React components and design tokens",
   "type": "module",
