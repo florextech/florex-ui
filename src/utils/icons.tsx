@@ -1,10 +1,10 @@
-import { type ComponentType, type ReactNode, createElement, lazy, Suspense } from "react";
+import { type ComponentType, type ReactNode, createElement } from "react";
 
 let phosphor: Record<string, ComponentType<{ size?: number; weight?: string; className?: string }>> | null = null;
 
 try {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  phosphor = require("@phosphor-icons/react");
+  // @ts-expect-error -- optional peer dependency, may not be installed
+  phosphor = await import("@phosphor-icons/react");
 } catch {
   phosphor = null;
 }
@@ -16,22 +16,22 @@ function ph(name: string, props: { size?: number; weight?: string; className?: s
   return null;
 }
 
-export function ChevronLeft(props: { size?: number; className?: string }) {
+export function ChevronLeft(props: Readonly<{ size?: number; className?: string }>) {
   return ph("CaretLeft", props) ?? <span className={props.className}>‹</span>;
 }
 
-export function ChevronRight(props: { size?: number; className?: string }) {
+export function ChevronRight(props: Readonly<{ size?: number; className?: string }>) {
   return ph("CaretRight", props) ?? <span className={props.className}>›</span>;
 }
 
-export function ChevronDown(props: { size?: number; className?: string }) {
+export function ChevronDown(props: Readonly<{ size?: number; className?: string }>) {
   return ph("CaretDown", props) ?? <span className={props.className}>▾</span>;
 }
 
-export function CloseIcon(props: { size?: number; className?: string }) {
+export function CloseIcon(props: Readonly<{ size?: number; className?: string }>) {
   return ph("X", { ...props, weight: "bold" }) ?? <span className={props.className}>✕</span>;
 }
 
-export function SlashIcon(props: { size?: number; className?: string }) {
+export function SlashIcon(props: Readonly<{ size?: number; className?: string }>) {
   return ph("CaretRight", { ...props, size: props.size ?? 12 }) ?? <span className={props.className}>/</span>;
 }
