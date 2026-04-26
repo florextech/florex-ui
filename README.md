@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@florexlabs/ui.svg)](https://www.npmjs.com/package/@florexlabs/ui)
 [![license](https://img.shields.io/npm/l/@florexlabs/ui.svg)](https://github.com/florextech/florex-ui/blob/main/LICENSE)
+[![storybook](https://img.shields.io/badge/storybook-live-ff4785.svg)](https://florextech.github.io/florex-ui/)
 
 Dark-first React component library built with **Tailwind CSS v4**, **TypeScript**, and **CVA**. 46+ accessible, composable components designed for modern web applications.
 
@@ -114,7 +115,8 @@ import { colors, spacing, radius, shadows } from "@florexlabs/ui";
 
 ## Documentation
 
-Full component documentation is available in the [`docs/`](./docs) folder with props tables, usage examples, and variants for every component.
+- **[Storybook](https://florextech.github.io/florex-ui/)** — live component playground
+- **[docs/](./docs)** — MDX documentation with props tables and examples
 
 ## Development
 

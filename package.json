@@ -73,7 +73,7 @@
     "name": "Florex Labs",
     "url": "https://florexlabs.com"
   },
-  "homepage": "https://github.com/florextech/florex-ui#readme",
+  "homepage": "https://florextech.github.io/florex-ui",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/florextech/florex-ui.git"
