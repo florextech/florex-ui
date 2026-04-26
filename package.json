@@ -1,0 +1,58 @@
+{
+  "name": "@florex/ui",
+  "version": "0.1.0",
+  "description": "Florex Labs shared UI library — dark-first React components and design tokens",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./florex.css": "./dist/florex.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && cp src/themes/florex.css dist/florex.css",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "tailwindcss": ">=4"
+  },
+  "dependencies": {
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "tailwind-merge": "3.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "eslint": "9.25.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tsup": "8.4.0",
+    "typescript": "5.8.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/florexlabs/florex-ui"
+  },
+  "keywords": [
+    "florex",
+    "ui",
+    "react",
+    "tailwind",
+    "design-system",
+    "dark-theme"
+  ]
+}
