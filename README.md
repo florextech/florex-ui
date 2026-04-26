@@ -179,19 +179,6 @@ All tokens are available as CSS custom properties via `florex.css`:
 --font-montserrat, --font-poppins
 ```
 
-## Migration Notes
-
-### From chatbot-studio-app
-1. Replace local `lib/utils.ts` (`cn`) with `import { cn } from "@florexlabs/ui"`
-2. Replace `components/ui/button.tsx` with `import { Button } from "@florexlabs/ui"`
-3. Replace `components/feedback/empty-state.tsx` with `import { EmptyState } from "@florexlabs/ui"`
-4. Import `@florexlabs/ui/florex.css` in `app/globals.css` and remove duplicated `:root` tokens
-
-### From florex-labs-landing / logcat-desk-web (Astro)
-1. Import `@florexlabs/ui/florex.css` in your global CSS and remove duplicated `:root` tokens
-2. For React components, add `@astrojs/react` and use them in `.astro` files as client islands
-3. Or continue using Astro components and just consume the CSS tokens
-
 ## License
 
 MIT
