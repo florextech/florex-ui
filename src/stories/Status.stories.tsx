@@ -10,4 +10,16 @@ export default meta;
 type Story = StoryObj<typeof Status>;
 
 export const Success: Story = { args: { value: "success", children: "Online" } };
+export const Warning: Story = { args: { value: "warning", children: "Degraded" } };
 export const Danger: Story = { args: { value: "danger", children: "Offline" } };
+export const Neutral: Story = { args: { value: "neutral", children: "Unknown" } };
+export const Group: StoryObj = {
+  render: () => (
+    <div className="space-y-2">
+      <Status value="success">API — Operational</Status>
+      <Status value="warning">Database — Slow queries</Status>
+      <Status value="danger">CDN — Down</Status>
+      <Status value="neutral">Monitoring — Pending</Status>
+    </div>
+  ),
+};

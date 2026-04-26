@@ -1,18 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "../components/Breadcrumb/Breadcrumb";
+import { House } from "@phosphor-icons/react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "../components/Breadcrumb/Breadcrumb";
 
-const meta: Meta<typeof Breadcrumb> = { title: "Components/Breadcrumb", component: Breadcrumb };
+const meta: Meta = { title: "Components/Breadcrumb" };
 export default meta;
-type Story = StoryObj<typeof Breadcrumb>;
 
-export const Default: Story = {
+export const Default: StoryObj = {
   render: () => (
     <Breadcrumb>
-      <BreadcrumbItem><BreadcrumbLink href="/">Home</BreadcrumbLink></BreadcrumbItem>
-      <BreadcrumbSeparator />
-      <BreadcrumbItem><BreadcrumbLink href="/settings">Settings</BreadcrumbLink></BreadcrumbItem>
-      <BreadcrumbSeparator />
-      <BreadcrumbItem><span>Profile</span></BreadcrumbItem>
+      <BreadcrumbItem><BreadcrumbLink href="#"><House size={14} /> Home</BreadcrumbLink></BreadcrumbItem>
+      <BreadcrumbItem><BreadcrumbLink href="#">Organizations</BreadcrumbLink></BreadcrumbItem>
+      <BreadcrumbItem><BreadcrumbLink href="#">Florex Labs</BreadcrumbLink></BreadcrumbItem>
+      <BreadcrumbItem><span className="text-[var(--foreground)]">Settings</span></BreadcrumbItem>
     </Breadcrumb>
   ),
 };
