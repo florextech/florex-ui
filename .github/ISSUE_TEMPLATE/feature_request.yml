@@ -1,0 +1,29 @@
+---
+name: Feature Request
+description: Suggest a new component or feature
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Have an idea for @florexlabs/ui? We'd love to hear it.
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      description: New component name or existing component to enhance.
+      placeholder: e.g. DatePicker, Button (new variant)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should it do? Why is it useful?
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: Proposed API
+      description: How would you use it?
+      render: tsx
