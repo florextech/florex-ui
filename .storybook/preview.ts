@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import "../src/themes/florex.css";
+import "./storybook.css";
 
 const preview: Preview = {
   parameters: {
