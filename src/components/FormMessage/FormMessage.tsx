@@ -5,7 +5,7 @@ interface FormMessageProps {
   className?: string;
 }
 
-function FormMessage({ message, className }: FormMessageProps) {
+function FormMessage({ message, className }: Readonly<FormMessageProps>) {
   if (!message) return null;
   return <p className={cn("mt-1 text-xs text-(--danger)", className)}>{message}</p>;
 }

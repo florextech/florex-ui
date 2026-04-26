@@ -7,7 +7,7 @@ interface ListProps {
   className?: string;
 }
 
-function List({ children, ordered, className }: ListProps) {
+function List({ children, ordered, className }: Readonly<ListProps>) {
   const Tag = ordered ? "ol" : "ul";
   return (
     <Tag className={cn("space-y-1 pl-5 text-sm text-(--foreground)", ordered ? "list-decimal" : "list-disc", className)}>
@@ -16,7 +16,7 @@ function List({ children, ordered, className }: ListProps) {
   );
 }
 
-function ListItem({ children, className }: { children: ReactNode; className?: string }) {
+function ListItem({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
   return <li className={cn("marker:text-(--brand-600)", className)}>{children}</li>;
 }
 

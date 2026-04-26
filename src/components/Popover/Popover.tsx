@@ -7,7 +7,7 @@ interface PopoverProps {
   className?: string;
 }
 
-function Popover({ trigger, children, className }: PopoverProps) {
+function Popover({ trigger, children, className }: Readonly<PopoverProps>) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

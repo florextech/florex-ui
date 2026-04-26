@@ -5,7 +5,7 @@ interface SkeletonProps {
   circle?: boolean;
 }
 
-function Skeleton({ className, circle }: SkeletonProps) {
+function Skeleton({ className, circle }: Readonly<SkeletonProps>) {
   return (
     <div
       className={cn(

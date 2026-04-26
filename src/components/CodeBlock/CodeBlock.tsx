@@ -7,7 +7,7 @@ interface CodeBlockProps {
   className?: string;
 }
 
-function CodeBlock({ children, title, className }: CodeBlockProps) {
+function CodeBlock({ children, title, className }: Readonly<CodeBlockProps>) {
   const [copied, setCopied] = useState(false);
 
   const copy = () => {

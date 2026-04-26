@@ -8,7 +8,7 @@ interface ModalProps {
   className?: string;
 }
 
-function Modal({ open, onClose, children, className }: ModalProps) {
+function Modal({ open, onClose, children, className }: Readonly<ModalProps>) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {

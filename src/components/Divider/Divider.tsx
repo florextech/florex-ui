@@ -5,7 +5,7 @@ interface DividerProps {
   label?: string;
 }
 
-function Divider({ className, label }: DividerProps) {
+function Divider({ className, label }: Readonly<DividerProps>) {
   if (label) {
     return (
       <div className={cn("flex items-center gap-3", className)}>

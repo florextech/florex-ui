@@ -26,7 +26,7 @@ const badgeVariants = cva(
 type BadgeProps = HTMLAttributes<HTMLSpanElement> &
   VariantProps<typeof badgeVariants>;
 
-function Badge({ className, tone, ...props }: BadgeProps) {
+function Badge({ className, tone, ...props }: Readonly<BadgeProps>) {
   return (
     <span className={cn(badgeVariants({ tone }), className)} {...props} />
   );

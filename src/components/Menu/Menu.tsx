@@ -3,7 +3,7 @@ import { cn } from "../../utils/cn";
 
 const MenuCtx = createContext<{ open: boolean; setOpen: (v: boolean) => void }>({ open: false, setOpen: () => {} });
 
-function Menu({ children, className }: { children: ReactNode; className?: string }) {
+function Menu({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -23,7 +23,7 @@ function Menu({ children, className }: { children: ReactNode; className?: string
   );
 }
 
-function MenuTrigger({ children, className }: { children: ReactNode; className?: string }) {
+function MenuTrigger({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
   const { open, setOpen } = useContext(MenuCtx);
   return (
     <button
@@ -36,7 +36,7 @@ function MenuTrigger({ children, className }: { children: ReactNode; className?:
   );
 }
 
-function MenuContent({ children, className }: { children: ReactNode; className?: string }) {
+function MenuContent({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
   const { open } = useContext(MenuCtx);
   if (!open) return null;
   return (
@@ -53,7 +53,7 @@ interface MenuItemProps {
   className?: string;
 }
 
-function MenuItem({ children, onClick, icon, className }: MenuItemProps) {
+function MenuItem({ children, onClick, icon, className }: Readonly<MenuItemProps>) {
   const { setOpen } = useContext(MenuCtx);
   return (
     <button

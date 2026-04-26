@@ -19,7 +19,7 @@ type TagProps = VariantProps<typeof tagVariants> & {
   className?: string;
 };
 
-function Tag({ children, onClose, variant, className }: TagProps) {
+function Tag({ children, onClose, variant, className }: Readonly<TagProps>) {
   return (
     <span className={cn(tagVariants({ variant }), className)}>
       {children}

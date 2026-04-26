@@ -8,7 +8,7 @@ interface ProgressProps {
   className?: string;
 }
 
-function Progress({ value, size = "md", className }: ProgressProps) {
+function Progress({ value, size = "md", className }: Readonly<ProgressProps>) {
   const clamped = Math.min(100, Math.max(0, value));
   return (
     <div

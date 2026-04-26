@@ -7,7 +7,7 @@ interface StepsProps {
   className?: string;
 }
 
-function Steps({ children, current, className }: StepsProps) {
+function Steps({ children, current, className }: Readonly<StepsProps>) {
   const items = Children.toArray(children);
   return (
     <div className={cn("flex items-start gap-0", className)}>
@@ -35,7 +35,7 @@ function Steps({ children, current, className }: StepsProps) {
   );
 }
 
-function Step({ title, description }: { title: string; description?: string }) {
+function Step({ title, description }: Readonly<{ title: string; description?: string }>) {
   return (
     <div className="px-1">
       <p className="text-xs font-medium text-(--foreground)">{title}</p>

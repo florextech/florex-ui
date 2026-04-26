@@ -6,7 +6,7 @@ interface CodeProps {
   className?: string;
 }
 
-function Code({ children, className }: CodeProps) {
+function Code({ children, className }: Readonly<CodeProps>) {
   return (
     <code
       className={cn(

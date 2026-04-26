@@ -9,7 +9,7 @@ interface EmptyStateProps {
   className?: string;
 }
 
-function EmptyState({ icon, title, description, action, className }: EmptyStateProps) {
+function EmptyState({ icon, title, description, action, className }: Readonly<EmptyStateProps>) {
   return (
     <div className={cn("flex flex-col items-center justify-center gap-4 py-16 text-center", className)}>
       {icon && <div className="text-(--muted)">{icon}</div>}

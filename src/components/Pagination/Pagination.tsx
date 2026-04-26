@@ -8,7 +8,7 @@ interface PaginationProps {
   className?: string;
 }
 
-function Pagination({ page, totalPages, onPageChange, className }: PaginationProps) {
+function Pagination({ page, totalPages, onPageChange, className }: Readonly<PaginationProps>) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
   return (
     <nav aria-label="Pagination" className={cn("flex items-center gap-1", className)}>

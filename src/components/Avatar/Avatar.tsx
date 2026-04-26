@@ -9,7 +9,7 @@ interface AvatarProps {
   className?: string;
 }
 
-function Avatar({ src, name, size = "md", className }: AvatarProps) {
+function Avatar({ src, name, size = "md", className }: Readonly<AvatarProps>) {
   const initials = name?.slice(0, 2).toUpperCase() ?? "?";
   return src ? (
     <img

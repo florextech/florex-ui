@@ -17,7 +17,7 @@ interface HeadingProps {
   children: ReactNode;
 }
 
-function Heading({ as: Tag = "h2", size = "lg", className, children }: HeadingProps) {
+function Heading({ as: Tag = "h2", size = "lg", className, children }: Readonly<HeadingProps>) {
   return (
     <Tag className={cn("font-display font-bold tracking-tight text-(--foreground)", sizeMap[size], className)}>
       {children}

@@ -14,7 +14,7 @@ const trendConfig = {
   neutral: { arrow: "→", color: "text-(--muted)" },
 };
 
-function Stat({ label, value, helpText, trend, className }: StatProps) {
+function Stat({ label, value, helpText, trend, className }: Readonly<StatProps>) {
   return (
     <div className={cn("space-y-1", className)}>
       <p className="text-xs font-medium text-(--muted)">{label}</p>

@@ -9,7 +9,7 @@ interface DrawerProps {
   className?: string;
 }
 
-function Drawer({ open, onClose, side = "right", children, className }: DrawerProps) {
+function Drawer({ open, onClose, side = "right", children, className }: Readonly<DrawerProps>) {
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {

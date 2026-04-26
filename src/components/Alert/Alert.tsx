@@ -19,7 +19,7 @@ type AlertProps = HTMLAttributes<HTMLDivElement> &
     icon?: ReactNode;
   };
 
-function Alert({ className, variant, icon, children, ...props }: AlertProps) {
+function Alert({ className, variant, icon, children, ...props }: Readonly<AlertProps>) {
   return (
     <div role="alert" className={cn(alertVariants({ variant }), className)} {...props}>
       {icon && <span className="mt-0.5 shrink-0">{icon}</span>}

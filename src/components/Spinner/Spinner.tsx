@@ -4,7 +4,7 @@ interface SpinnerProps {
   className?: string;
 }
 
-function Spinner({ className }: SpinnerProps) {
+function Spinner({ className }: Readonly<SpinnerProps>) {
   return (
     <svg
       className={cn("animate-spin", className)}

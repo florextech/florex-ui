@@ -9,7 +9,7 @@ interface SectionProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
 }
 
-function Section({ eyebrow, title, description, glow, className, children, ...props }: SectionProps) {
+function Section({ eyebrow, title, description, glow, className, children, ...props }: Readonly<SectionProps>) {
   return (
     <section className={cn("relative py-16 sm:py-20", className)} {...props}>
       {glow && (

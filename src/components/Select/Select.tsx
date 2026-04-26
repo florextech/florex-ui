@@ -16,7 +16,7 @@ interface SelectProps {
   className?: string;
 }
 
-function Select({ options, value, onChange, placeholder = "Select…", disabled, className }: SelectProps) {
+function Select({ options, value, onChange, placeholder = "Select…", disabled, className }: Readonly<SelectProps>) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const selected = options.find((o) => o.value === value);

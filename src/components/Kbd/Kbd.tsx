@@ -6,7 +6,7 @@ interface KbdProps {
   className?: string;
 }
 
-function Kbd({ children, className }: KbdProps) {
+function Kbd({ children, className }: Readonly<KbdProps>) {
   return (
     <kbd
       className={cn(

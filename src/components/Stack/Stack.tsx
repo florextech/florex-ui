@@ -10,7 +10,7 @@ interface StackProps {
   children: ReactNode;
 }
 
-function Stack({ direction = "column", gap = "md", className, children }: StackProps) {
+function Stack({ direction = "column", gap = "md", className, children }: Readonly<StackProps>) {
   return (
     <div className={cn("flex", direction === "row" ? "flex-row" : "flex-col", gaps[gap], className)}>
       {children}

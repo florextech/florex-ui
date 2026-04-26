@@ -6,7 +6,7 @@ interface HighlightProps {
   className?: string;
 }
 
-function Highlight({ text, query, className }: HighlightProps) {
+function Highlight({ text, query, className }: Readonly<HighlightProps>) {
   if (!query) return <span className={className}>{text}</span>;
 
   const parts = text.split(new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi"));

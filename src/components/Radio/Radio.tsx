@@ -17,7 +17,7 @@ interface RadioGroupProps {
   className?: string;
 }
 
-function RadioGroup({ name, value, onChange, children, className }: RadioGroupProps) {
+function RadioGroup({ name, value, onChange, children, className }: Readonly<RadioGroupProps>) {
   return (
     <div role="radiogroup" className={cn("flex flex-col gap-2", className)}>
       <Ctx.Provider value={{ name, value, onChange }}>{children}</Ctx.Provider>
@@ -31,7 +31,7 @@ interface RadioItemProps {
   className?: string;
 }
 
-function RadioItem({ value, label, className }: RadioItemProps) {
+function RadioItem({ value, label, className }: Readonly<RadioItemProps>) {
   const ctx = useContext(Ctx);
   return (
     <label className={cn("inline-flex cursor-pointer items-center gap-2", className)}>

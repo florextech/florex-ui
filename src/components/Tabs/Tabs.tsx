@@ -14,7 +14,7 @@ interface TabsProps {
   className?: string;
 }
 
-function Tabs({ defaultValue, children, className }: TabsProps) {
+function Tabs({ defaultValue, children, className }: Readonly<TabsProps>) {
   const [value, onChange] = useState(defaultValue);
   return (
     <TabsContext.Provider value={{ value, onChange }}>
@@ -28,7 +28,7 @@ interface TabsListProps {
   className?: string;
 }
 
-function TabsList({ children, className }: TabsListProps) {
+function TabsList({ children, className }: Readonly<TabsListProps>) {
   return (
     <div role="tablist" className={cn("inline-flex gap-1 rounded-xl border bg-(--surface) p-1", className)}>
       {children}
@@ -42,7 +42,7 @@ interface TabsTriggerProps {
   className?: string;
 }
 
-function TabsTrigger({ value, children, className }: TabsTriggerProps) {
+function TabsTrigger({ value, children, className }: Readonly<TabsTriggerProps>) {
   const ctx = useContext(TabsContext);
   const active = ctx.value === value;
   return (
@@ -69,7 +69,7 @@ interface TabsContentProps {
   className?: string;
 }
 
-function TabsContent({ value, children, className }: TabsContentProps) {
+function TabsContent({ value, children, className }: Readonly<TabsContentProps>) {
   const ctx = useContext(TabsContext);
   if (ctx.value !== value) return null;
   return <div role="tabpanel" className={cn("mt-3", className)}>{children}</div>;

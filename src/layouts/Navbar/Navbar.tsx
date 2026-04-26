@@ -7,7 +7,7 @@ interface NavbarProps extends HTMLAttributes<HTMLElement> {
   actions?: ReactNode;
 }
 
-function Navbar({ logo, children, actions, className, ...props }: NavbarProps) {
+function Navbar({ logo, children, actions, className, ...props }: Readonly<NavbarProps>) {
   return (
     <header
       className={cn(

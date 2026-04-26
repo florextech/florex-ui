@@ -36,7 +36,7 @@ type TextProps = {
   } & VariantProps<typeof textVariants> &
     Omit<HTMLAttributes<HTMLElement>, "color">;
 
-function Text({ as: Tag = "p", className, variant, size, weight, ...props }: TextProps) {
+function Text({ as: Tag = "p", className, variant, size, weight, ...props }: Readonly<TextProps>) {
   return <Tag className={cn(textVariants({ variant, size, weight }), className)} {...props} />;
 }
 
