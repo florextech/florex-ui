@@ -1,0 +1,60 @@
+# Timeline
+
+A vertical timeline for displaying chronological events.
+
+## Import
+
+```tsx
+import { Timeline, TimelineItem } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Timeline>
+  <TimelineItem title="Order placed">Your order has been confirmed.</TimelineItem>
+  <TimelineItem title="Shipped">Package is on its way.</TimelineItem>
+  <TimelineItem title="Delivered">Package delivered.</TimelineItem>
+</Timeline>
+```
+
+## Sub-components
+
+### Timeline
+
+Root container.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | TimelineItem elements |
+| className | `string` | — | Additional CSS classes |
+
+### TimelineItem
+
+A single event with a dot, connecting line, title, and optional content.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| title | `string` | — | Event title |
+| children | `ReactNode` | — | Event description |
+| icon | `ReactNode` | — | Custom icon inside the dot |
+
+## Examples
+
+### With icons
+
+```tsx
+import { Package, Truck, CheckCircle } from '@phosphor-icons/react';
+
+<Timeline>
+  <TimelineItem title="Order placed" icon={<Package size={12} />}>
+    Jan 15, 2024
+  </TimelineItem>
+  <TimelineItem title="Shipped" icon={<Truck size={12} />}>
+    Jan 17, 2024
+  </TimelineItem>
+  <TimelineItem title="Delivered" icon={<CheckCircle size={12} />}>
+    Jan 20, 2024
+  </TimelineItem>
+</Timeline>
+```

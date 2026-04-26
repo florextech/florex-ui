@@ -1,0 +1,57 @@
+# Radio
+
+A radio group with individual radio items for single-selection.
+
+## Import
+
+```tsx
+import { RadioGroup, RadioItem } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+const [value, setValue] = useState('option1');
+
+<RadioGroup name="plan" value={value} onChange={setValue}>
+  <RadioItem value="option1" label="Free" />
+  <RadioItem value="option2" label="Pro" />
+  <RadioItem value="option3" label="Enterprise" />
+</RadioGroup>
+```
+
+## Sub-components
+
+### RadioGroup
+
+Root wrapper that provides context for name, value, and onChange.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| name | `string` | — | HTML name attribute for all radio inputs |
+| value | `string` | — | Currently selected value |
+| onChange | `(value: string) => void` | — | Called when selection changes |
+| children | `ReactNode` | — | RadioItem elements |
+| className | `string` | — | Additional CSS classes |
+
+### RadioItem
+
+A single radio option with label.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| value | `string` | — | Option value |
+| label | `string` | — | Display label |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Horizontal layout
+
+```tsx
+<RadioGroup name="size" value={size} onChange={setSize} className="flex-row">
+  <RadioItem value="sm" label="Small" />
+  <RadioItem value="md" label="Medium" />
+  <RadioItem value="lg" label="Large" />
+</RadioGroup>
+```

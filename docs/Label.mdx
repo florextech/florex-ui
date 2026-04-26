@@ -1,0 +1,33 @@
+# Label
+
+A styled form label element.
+
+## Import
+
+```tsx
+import { Label } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Label htmlFor="name">Name</Label>
+```
+
+## Props
+
+Accepts all native `<label>` HTML attributes.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| htmlFor | `string` | — | ID of the associated form element |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With input
+
+```tsx
+<Label htmlFor="username">Username</Label>
+<Input id="username" placeholder="johndoe" />
+```

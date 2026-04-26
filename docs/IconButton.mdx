@@ -1,0 +1,52 @@
+# IconButton
+
+A square button designed for a single icon, with required `aria-label`.
+
+## Import
+
+```tsx
+import { IconButton } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+import { Gear } from '@phosphor-icons/react';
+
+<IconButton icon={<Gear size={18} />} aria-label="Settings" />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| icon | `ReactNode` | — | Icon element (required) |
+| aria-label | `string` | — | Accessible label (required) |
+| variant | `'primary' \| 'secondary' \| 'ghost'` | `'ghost'` | Visual style |
+| size | `'sm' \| 'md' \| 'lg'` | `'md'` | Button size |
+| disabled | `boolean` | `false` | Disables the button |
+| className | `string` | — | Additional CSS classes |
+
+Also accepts all native `<button>` HTML attributes.
+
+## Examples
+
+### Variants
+
+```tsx
+import { Heart, Trash, PencilSimple } from '@phosphor-icons/react';
+
+<IconButton icon={<Heart size={18} />} aria-label="Like" variant="primary" />
+<IconButton icon={<PencilSimple size={18} />} aria-label="Edit" variant="secondary" />
+<IconButton icon={<Trash size={18} />} aria-label="Delete" variant="ghost" />
+```
+
+### Sizes
+
+```tsx
+import { Bell } from '@phosphor-icons/react';
+
+<IconButton icon={<Bell size={14} />} aria-label="Notifications" size="sm" />
+<IconButton icon={<Bell size={18} />} aria-label="Notifications" size="md" />
+<IconButton icon={<Bell size={22} />} aria-label="Notifications" size="lg" />
+```

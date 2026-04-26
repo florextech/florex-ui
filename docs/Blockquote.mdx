@@ -1,0 +1,33 @@
+# Blockquote
+
+A styled quotation block with optional citation.
+
+## Import
+
+```tsx
+import { Blockquote } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Blockquote>Design is not just what it looks like. Design is how it works.</Blockquote>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Quote content |
+| cite | `string` | — | Attribution text |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With citation
+
+```tsx
+<Blockquote cite="Steve Jobs">
+  Design is not just what it looks like and feels like. Design is how it works.
+</Blockquote>
+```

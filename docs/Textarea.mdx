@@ -1,0 +1,40 @@
+# Textarea
+
+A styled multi-line text input.
+
+## Import
+
+```tsx
+import { Textarea } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Textarea placeholder="Write your message..." />
+```
+
+## Props
+
+Accepts all native `<textarea>` HTML attributes.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| placeholder | `string` | — | Placeholder text |
+| disabled | `boolean` | `false` | Disables the textarea |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With label
+
+```tsx
+<Label htmlFor="bio">Bio</Label>
+<Textarea id="bio" placeholder="Tell us about yourself..." rows={4} />
+```
+
+### Disabled
+
+```tsx
+<Textarea placeholder="Read-only" disabled />
+```

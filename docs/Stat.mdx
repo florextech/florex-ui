@@ -1,0 +1,45 @@
+# Stat
+
+Displays a metric with label, value, optional trend indicator, and help text.
+
+## Import
+
+```tsx
+import { Stat } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Stat label="Revenue" value="$12,450" />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| label | `string` | — | Metric label |
+| value | `string \| number` | — | Metric value |
+| helpText | `string` | — | Supporting text below the value |
+| trend | `'up' \| 'down' \| 'neutral'` | — | Trend arrow indicator |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With trend
+
+```tsx
+<Stat label="Revenue" value="$12,450" trend="up" helpText="+12% from last month" />
+<Stat label="Churn" value="3.2%" trend="down" helpText="-0.5% from last month" />
+<Stat label="Users" value="1,024" trend="neutral" helpText="No change" />
+```
+
+### Dashboard row
+
+```tsx
+<Stack direction="row" gap="lg">
+  <Stat label="Total Users" value="8,420" trend="up" />
+  <Stat label="Active Now" value="312" />
+  <Stat label="Bounce Rate" value="24%" trend="down" />
+</Stack>
+```

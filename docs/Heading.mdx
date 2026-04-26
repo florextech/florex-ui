@@ -1,0 +1,36 @@
+# Heading
+
+A polymorphic heading component with configurable semantic tag and visual size.
+
+## Import
+
+```tsx
+import { Heading } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Heading>Section Title</Heading>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| as | `'h1' \| 'h2' \| 'h3' \| 'h4' \| 'h5' \| 'h6'` | `'h2'` | HTML heading tag |
+| size | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl'` | `'lg'` | Visual size |
+| children | `ReactNode` | — | Heading text |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Sizes
+
+```tsx
+<Heading as="h1" size="2xl">Extra Large</Heading>
+<Heading as="h2" size="xl">Large</Heading>
+<Heading as="h3" size="md">Medium</Heading>
+<Heading as="h4" size="sm">Small</Heading>
+<Heading as="h5" size="xs">Extra Small</Heading>
+```

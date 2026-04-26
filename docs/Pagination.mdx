@@ -1,0 +1,36 @@
+# Pagination
+
+Page navigation with previous/next buttons and numbered pages.
+
+## Import
+
+```tsx
+import { Pagination } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+const [page, setPage] = useState(1);
+
+<Pagination page={page} totalPages={10} onPageChange={setPage} />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| page | `number` | — | Current active page (1-indexed) |
+| totalPages | `number` | — | Total number of pages |
+| onPageChange | `(page: number) => void` | — | Called when a page is selected |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Basic
+
+```tsx
+const [page, setPage] = useState(3);
+
+<Pagination page={page} totalPages={5} onPageChange={setPage} />
+```

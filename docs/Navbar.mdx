@@ -1,0 +1,51 @@
+# Navbar
+
+A sticky top navigation bar with logo, nav links, and action slots.
+
+## Import
+
+```tsx
+import { Navbar } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Navbar logo={<span className="font-bold">MyApp</span>}>
+  <a href="/docs">Docs</a>
+  <a href="/pricing">Pricing</a>
+</Navbar>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| logo | `ReactNode` | — | Logo element (required) |
+| children | `ReactNode` | — | Navigation links (hidden on mobile) |
+| actions | `ReactNode` | — | Right-side action elements (e.g. buttons) |
+| className | `string` | — | Additional CSS classes |
+
+Also accepts all native `<header>` HTML attributes.
+
+## Examples
+
+### Full navbar
+
+```tsx
+import { GithubLogo } from '@phosphor-icons/react';
+
+<Navbar
+  logo={<span className="text-lg font-bold">Florex</span>}
+  actions={
+    <Stack direction="row" gap="sm">
+      <IconButton icon={<GithubLogo size={18} />} aria-label="GitHub" />
+      <Button size="sm">Get Started</Button>
+    </Stack>
+  }
+>
+  <a href="/docs">Docs</a>
+  <a href="/components">Components</a>
+  <a href="/pricing">Pricing</a>
+</Navbar>
+```

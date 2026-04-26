@@ -1,0 +1,40 @@
+# EmptyState
+
+A centered placeholder for empty views with icon, title, description, and action.
+
+## Import
+
+```tsx
+import { EmptyState } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<EmptyState title="No results found" description="Try adjusting your search." />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| title | `string` | — | Main heading (required) |
+| description | `string` | — | Supporting text |
+| icon | `ReactNode` | — | Icon displayed above the title |
+| action | `ReactNode` | — | Action element (e.g. a Button) |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With icon and action
+
+```tsx
+import { MagnifyingGlass } from '@phosphor-icons/react';
+
+<EmptyState
+  icon={<MagnifyingGlass size={48} />}
+  title="No results found"
+  description="Try a different search term or clear your filters."
+  action={<Button variant="secondary">Clear filters</Button>}
+/>
+```

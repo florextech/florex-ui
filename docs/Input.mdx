@@ -1,0 +1,40 @@
+# Input
+
+A styled text input field.
+
+## Import
+
+```tsx
+import { Input } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Input placeholder="Enter your name" />
+```
+
+## Props
+
+Accepts all native `<input>` HTML attributes.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+| placeholder | `string` | — | Placeholder text |
+| disabled | `boolean` | `false` | Disables the input |
+
+## Examples
+
+### With label
+
+```tsx
+<Label htmlFor="email">Email</Label>
+<Input id="email" type="email" placeholder="you@example.com" />
+```
+
+### Disabled
+
+```tsx
+<Input placeholder="Disabled input" disabled />
+```

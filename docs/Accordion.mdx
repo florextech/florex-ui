@@ -1,0 +1,79 @@
+# Accordion
+
+A collapsible content panel built on native `<details>` elements.
+
+## Import
+
+```tsx
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Accordion>
+  <AccordionItem>
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>Yes, it uses native HTML details/summary elements.</AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+## Sub-components
+
+### Accordion
+
+Root wrapper that applies dividers between items.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | AccordionItem elements |
+| className | `string` | — | Additional CSS classes |
+
+### AccordionItem
+
+Wraps a single collapsible section using `<details>`.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Trigger and content elements |
+| className | `string` | — | Additional CSS classes |
+
+### AccordionTrigger
+
+The clickable header rendered as `<summary>`. Includes a chevron icon that rotates on open.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Trigger label |
+| className | `string` | — | Additional CSS classes |
+
+### AccordionContent
+
+The collapsible body content.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Content to reveal |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Multiple items
+
+```tsx
+<Accordion>
+  <AccordionItem>
+    <AccordionTrigger>What is Florex UI?</AccordionTrigger>
+    <AccordionContent>A modern React component library with a dark-first design.</AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>Is it customizable?</AccordionTrigger>
+    <AccordionContent>Yes, all components accept className for full Tailwind customization.</AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>Does it support SSR?</AccordionTrigger>
+    <AccordionContent>Yes, it uses native HTML elements that work without JavaScript.</AccordionContent>
+  </AccordionItem>
+</Accordion>
+```

@@ -1,0 +1,63 @@
+# Button
+
+A versatile button with multiple variants, sizes, and a loading state.
+
+## Import
+
+```tsx
+import { Button } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Button>Click me</Button>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| variant | `'primary' \| 'secondary' \| 'ghost' \| 'danger'` | `'primary'` | Visual style |
+| size | `'sm' \| 'md' \| 'lg'` | `'md'` | Button size |
+| loading | `boolean` | `false` | Shows a spinner and disables the button |
+| disabled | `boolean` | `false` | Disables the button |
+| children | `ReactNode` | — | Button content |
+| className | `string` | — | Additional CSS classes |
+
+Also accepts all native `<button>` HTML attributes.
+
+## Examples
+
+### Variants
+
+```tsx
+<Button variant="primary">Primary</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="danger">Danger</Button>
+```
+
+### Sizes
+
+```tsx
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+```
+
+### Loading state
+
+```tsx
+<Button loading>Saving...</Button>
+```
+
+### With icon
+
+```tsx
+import { Plus } from '@phosphor-icons/react';
+
+<Button variant="primary">
+  <Plus size={16} /> Add item
+</Button>
+```

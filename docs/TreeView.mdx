@@ -1,0 +1,62 @@
+# TreeView
+
+A collapsible tree structure built on native `<details>` elements.
+
+## Import
+
+```tsx
+import { TreeView, TreeNode } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<TreeView>
+  <TreeNode label="src" defaultOpen>
+    <TreeNode label="components">
+      <TreeNode label="Button.tsx" />
+      <TreeNode label="Card.tsx" />
+    </TreeNode>
+    <TreeNode label="index.ts" />
+  </TreeNode>
+</TreeView>
+```
+
+## Sub-components
+
+### TreeView
+
+Root container.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | TreeNode elements |
+| className | `string` | — | Additional CSS classes |
+
+### TreeNode
+
+A single node. If it has children, it renders as a collapsible `<details>`. Otherwise, it renders as a leaf.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| label | `ReactNode` | — | Node label |
+| children | `ReactNode` | — | Nested TreeNode elements (makes it collapsible) |
+| defaultOpen | `boolean` | `false` | Whether the node starts expanded |
+
+## Examples
+
+### File tree
+
+```tsx
+import { Folder, File } from '@phosphor-icons/react';
+
+<TreeView>
+  <TreeNode label={<><Folder size={14} /> src</>} defaultOpen>
+    <TreeNode label={<><Folder size={14} /> components</>}>
+      <TreeNode label={<><File size={14} /> Button.tsx</>} />
+      <TreeNode label={<><File size={14} /> Card.tsx</>} />
+    </TreeNode>
+    <TreeNode label={<><File size={14} /> index.ts</>} />
+  </TreeNode>
+</TreeView>
+```

@@ -1,0 +1,61 @@
+# List
+
+An ordered or unordered list with styled markers.
+
+## Import
+
+```tsx
+import { List, ListItem } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<List>
+  <ListItem>First item</ListItem>
+  <ListItem>Second item</ListItem>
+</List>
+```
+
+## Sub-components
+
+### List
+
+Root list element (`<ul>` or `<ol>`).
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| ordered | `boolean` | `false` | Renders as `<ol>` with decimal markers |
+| children | `ReactNode` | — | ListItem elements |
+| className | `string` | — | Additional CSS classes |
+
+### ListItem
+
+A single `<li>` element with brand-colored markers.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Item content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Ordered list
+
+```tsx
+<List ordered>
+  <ListItem>Install the package</ListItem>
+  <ListItem>Import the components</ListItem>
+  <ListItem>Start building</ListItem>
+</List>
+```
+
+### Unordered list
+
+```tsx
+<List>
+  <ListItem>React 18+</ListItem>
+  <ListItem>Tailwind CSS 3+</ListItem>
+  <ListItem>TypeScript</ListItem>
+</List>
+```

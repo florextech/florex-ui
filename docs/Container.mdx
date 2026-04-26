@@ -1,0 +1,36 @@
+# Container
+
+A centered, max-width wrapper with responsive horizontal padding.
+
+## Import
+
+```tsx
+import { Container } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Container>
+  <p>Content constrained to 1280px max width.</p>
+</Container>
+```
+
+## Props
+
+Accepts all native `<div>` HTML attributes.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Page layout
+
+```tsx
+<Container>
+  <Heading as="h1" size="2xl">Page Title</Heading>
+  <Text variant="muted">Page description goes here.</Text>
+</Container>
+```

@@ -1,0 +1,31 @@
+# Highlight
+
+Highlights matching substrings within text.
+
+## Import
+
+```tsx
+import { Highlight } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Highlight text="React component library" query="component" />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| text | `string` | — | Full text to display |
+| query | `string` | — | Substring to highlight (case-insensitive) |
+| className | `string` | — | Additional CSS classes on the wrapper span |
+
+## Examples
+
+### Search results
+
+```tsx
+<Highlight text="Florex UI is a modern component library" query="modern" />
+```

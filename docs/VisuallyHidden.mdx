@@ -1,0 +1,34 @@
+# VisuallyHidden
+
+Hides content visually while keeping it accessible to screen readers.
+
+## Import
+
+```tsx
+import { VisuallyHidden } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<VisuallyHidden>Accessible label text</VisuallyHidden>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Content hidden visually but read by screen readers |
+
+## Examples
+
+### Icon-only button with accessible label
+
+```tsx
+import { Heart } from '@phosphor-icons/react';
+
+<button>
+  <Heart size={18} />
+  <VisuallyHidden>Add to favorites</VisuallyHidden>
+</button>
+```

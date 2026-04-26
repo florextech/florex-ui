@@ -1,0 +1,35 @@
+# Badge
+
+A small label for status, categories, or counts.
+
+## Import
+
+```tsx
+import { Badge } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Badge>Default</Badge>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| tone | `'neutral' \| 'brand' \| 'success' \| 'warning' \| 'danger'` | `'neutral'` | Color tone |
+| children | `ReactNode` | — | Badge content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Tones
+
+```tsx
+<Badge tone="neutral">Neutral</Badge>
+<Badge tone="brand">Brand</Badge>
+<Badge tone="success">Success</Badge>
+<Badge tone="warning">Warning</Badge>
+<Badge tone="danger">Danger</Badge>
+```

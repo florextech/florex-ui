@@ -1,0 +1,49 @@
+# Tag
+
+A small label with optional close button, useful for filters and selections.
+
+## Import
+
+```tsx
+import { Tag } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Tag>React</Tag>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| variant | `'subtle' \| 'solid'` | `'subtle'` | Visual style |
+| onClose | `() => void` | — | Shows a close button and calls this on click |
+| children | `ReactNode` | — | Tag content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Variants
+
+```tsx
+<Tag variant="subtle">Subtle</Tag>
+<Tag variant="solid">Solid</Tag>
+```
+
+### Removable
+
+```tsx
+<Tag onClose={() => console.log('removed')}>Removable</Tag>
+```
+
+### Tag group
+
+```tsx
+<Stack direction="row" gap="sm">
+  <Tag variant="solid">React</Tag>
+  <Tag variant="solid">TypeScript</Tag>
+  <Tag variant="solid">Tailwind</Tag>
+</Stack>
+```

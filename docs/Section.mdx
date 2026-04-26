@@ -1,0 +1,57 @@
+# Section
+
+A page section with optional eyebrow, title, description, and glow effect.
+
+## Import
+
+```tsx
+import { Section } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Section title="Features">
+  <p>Section content here.</p>
+</Section>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| eyebrow | `string` | — | Small uppercase label above the title |
+| title | `string` | — | Section heading |
+| description | `string` | — | Supporting paragraph below the title |
+| glow | `boolean` | `false` | Adds a radial gradient glow at the top |
+| children | `ReactNode` | — | Section content |
+| className | `string` | — | Additional CSS classes |
+
+Also accepts all native `<section>` HTML attributes.
+
+## Examples
+
+### With eyebrow and glow
+
+```tsx
+<Section
+  eyebrow="Why Florex"
+  title="Built for modern apps"
+  description="A dark-first component library designed for speed and aesthetics."
+  glow
+>
+  <Stack direction="row" gap="md">
+    <Card variant="hover"><CardHeader><CardTitle>Fast</CardTitle></CardHeader></Card>
+    <Card variant="hover"><CardHeader><CardTitle>Accessible</CardTitle></CardHeader></Card>
+    <Card variant="hover"><CardHeader><CardTitle>Beautiful</CardTitle></CardHeader></Card>
+  </Stack>
+</Section>
+```
+
+### Simple section
+
+```tsx
+<Section title="Getting Started">
+  <Text variant="muted">Install the package and start building.</Text>
+</Section>
+```

@@ -1,0 +1,51 @@
+# Text
+
+A polymorphic text component with variant, size, and weight controls.
+
+## Import
+
+```tsx
+import { Text } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Text>Default paragraph text.</Text>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| as | `'p' \| 'span' \| 'div' \| 'label'` | `'p'` | HTML element to render |
+| variant | `'default' \| 'muted' \| 'brand' \| 'danger'` | `'default'` | Color variant |
+| size | `'xs' \| 'sm' \| 'base' \| 'lg' \| 'xl' \| '2xl' \| '3xl'` | `'base'` | Font size |
+| weight | `'normal' \| 'medium' \| 'semibold' \| 'bold'` | `'normal'` | Font weight |
+| children | `ReactNode` | — | Text content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Variants
+
+```tsx
+<Text variant="default">Default text</Text>
+<Text variant="muted">Muted text</Text>
+<Text variant="brand">Brand text</Text>
+<Text variant="danger">Danger text</Text>
+```
+
+### Sizes and weights
+
+```tsx
+<Text size="xs" weight="medium">Extra small medium</Text>
+<Text size="lg" weight="bold">Large bold</Text>
+<Text size="2xl" weight="semibold">2XL semibold</Text>
+```
+
+### As span
+
+```tsx
+<p>This is <Text as="span" variant="brand" weight="semibold">highlighted</Text> text.</p>
+```

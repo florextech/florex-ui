@@ -1,0 +1,78 @@
+# Menu
+
+A dropdown menu with trigger button, content panel, and menu items.
+
+## Import
+
+```tsx
+import { Menu, MenuTrigger, MenuContent, MenuItem } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Menu>
+  <MenuTrigger>Options</MenuTrigger>
+  <MenuContent>
+    <MenuItem onClick={() => console.log('edit')}>Edit</MenuItem>
+    <MenuItem onClick={() => console.log('delete')}>Delete</MenuItem>
+  </MenuContent>
+</Menu>
+```
+
+## Sub-components
+
+### Menu
+
+Root wrapper that manages open/close state. Closes on outside click.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | MenuTrigger and MenuContent |
+| className | `string` | — | Additional CSS classes |
+
+### MenuTrigger
+
+The button that toggles the menu.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Trigger label |
+| className | `string` | — | Additional CSS classes |
+
+### MenuContent
+
+The dropdown panel. Only renders when open.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | MenuItem elements |
+| className | `string` | — | Additional CSS classes |
+
+### MenuItem
+
+A single menu action. Closes the menu on click.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Item label |
+| onClick | `() => void` | — | Click handler |
+| icon | `ReactNode` | — | Leading icon |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With icons
+
+```tsx
+import { PencilSimple, Trash, Copy } from '@phosphor-icons/react';
+
+<Menu>
+  <MenuTrigger>Actions</MenuTrigger>
+  <MenuContent>
+    <MenuItem icon={<PencilSimple size={16} />} onClick={() => {}}>Edit</MenuItem>
+    <MenuItem icon={<Copy size={16} />} onClick={() => {}}>Duplicate</MenuItem>
+    <MenuItem icon={<Trash size={16} />} onClick={() => {}}>Delete</MenuItem>
+  </MenuContent>
+</Menu>
+```

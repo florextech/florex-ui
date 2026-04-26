@@ -1,0 +1,47 @@
+# Tooltip
+
+A CSS-only tooltip that appears on hover/focus.
+
+## Import
+
+```tsx
+import { Tooltip } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Tooltip content="More info">
+  <Button variant="ghost">Hover me</Button>
+</Tooltip>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| content | `string` | — | Tooltip text |
+| children | `ReactNode` | — | Trigger element |
+| side | `'top' \| 'bottom' \| 'left' \| 'right'` | `'top'` | Tooltip position |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Positions
+
+```tsx
+<Tooltip content="Top" side="top"><Button variant="ghost">Top</Button></Tooltip>
+<Tooltip content="Bottom" side="bottom"><Button variant="ghost">Bottom</Button></Tooltip>
+<Tooltip content="Left" side="left"><Button variant="ghost">Left</Button></Tooltip>
+<Tooltip content="Right" side="right"><Button variant="ghost">Right</Button></Tooltip>
+```
+
+### On icon button
+
+```tsx
+import { Gear } from '@phosphor-icons/react';
+
+<Tooltip content="Settings">
+  <IconButton icon={<Gear size={18} />} aria-label="Settings" />
+</Tooltip>
+```

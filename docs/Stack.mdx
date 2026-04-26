@@ -1,0 +1,47 @@
+# Stack
+
+A flex layout utility for vertical or horizontal stacking with consistent gaps.
+
+## Import
+
+```tsx
+import { Stack } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Stack>
+  <p>Item 1</p>
+  <p>Item 2</p>
+</Stack>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| direction | `'row' \| 'column'` | `'column'` | Flex direction |
+| gap | `'sm' \| 'md' \| 'lg'` | `'md'` | Gap between children (`sm`=8px, `md`=16px, `lg`=24px) |
+| children | `ReactNode` | — | Stack content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Horizontal
+
+```tsx
+<Stack direction="row" gap="sm">
+  <Button>Cancel</Button>
+  <Button variant="primary">Save</Button>
+</Stack>
+```
+
+### Vertical with large gap
+
+```tsx
+<Stack direction="column" gap="lg">
+  <Card><p>Section 1</p></Card>
+  <Card><p>Section 2</p></Card>
+</Stack>
+```

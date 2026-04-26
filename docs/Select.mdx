@@ -1,0 +1,58 @@
+# Select
+
+A custom dropdown select with keyboard-friendly options list.
+
+## Import
+
+```tsx
+import { Select } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+const [value, setValue] = useState('');
+
+<Select
+  options={[
+    { value: 'react', label: 'React' },
+    { value: 'vue', label: 'Vue' },
+    { value: 'svelte', label: 'Svelte' },
+  ]}
+  value={value}
+  onChange={setValue}
+  placeholder="Choose a framework"
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| options | `SelectOption[]` | — | Array of `{ value, label }` objects |
+| value | `string` | — | Currently selected value |
+| onChange | `(value: string) => void` | — | Called when an option is selected |
+| placeholder | `string` | `'Select…'` | Placeholder text when no value is selected |
+| disabled | `boolean` | `false` | Disables the select |
+| className | `string` | — | Additional CSS classes |
+
+### SelectOption
+
+```ts
+interface SelectOption {
+  value: string;
+  label: string;
+}
+```
+
+## Examples
+
+### Disabled
+
+```tsx
+<Select
+  options={[{ value: 'a', label: 'Option A' }]}
+  placeholder="Disabled"
+  disabled
+/>
+```

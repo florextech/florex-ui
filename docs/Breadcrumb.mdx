@@ -1,0 +1,63 @@
+# Breadcrumb
+
+Navigation breadcrumbs with slash separators.
+
+## Import
+
+```tsx
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Breadcrumb>
+  <BreadcrumbLink href="/">Home</BreadcrumbLink>
+  <BreadcrumbLink href="/docs">Docs</BreadcrumbLink>
+  <BreadcrumbItem>Current Page</BreadcrumbItem>
+</Breadcrumb>
+```
+
+## Sub-components
+
+### Breadcrumb
+
+Root `<nav>` wrapper with `aria-label="Breadcrumb"`. Automatically inserts slash separators between items.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | BreadcrumbLink and BreadcrumbItem elements |
+| className | `string` | — | Additional CSS classes |
+
+### BreadcrumbItem
+
+A non-interactive breadcrumb segment (typically the current page).
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | Item label |
+| className | `string` | — | Additional CSS classes |
+
+### BreadcrumbLink
+
+A clickable breadcrumb segment rendered as `<a>`.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| href | `string` | — | Link destination |
+| children | `ReactNode` | — | Link label |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With icons
+
+```tsx
+import { House } from '@phosphor-icons/react';
+
+<Breadcrumb>
+  <BreadcrumbLink href="/"><House size={14} /> Home</BreadcrumbLink>
+  <BreadcrumbLink href="/settings">Settings</BreadcrumbLink>
+  <BreadcrumbItem>Profile</BreadcrumbItem>
+</Breadcrumb>
+```

@@ -1,0 +1,41 @@
+# Avatar
+
+Displays a user avatar image or initials fallback.
+
+## Import
+
+```tsx
+import { Avatar } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Avatar src="/avatar.jpg" name="John Doe" />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| src | `string` | — | Image URL |
+| name | `string` | — | User name (used for alt text and initials fallback) |
+| size | `'sm' \| 'md' \| 'lg'` | `'md'` | Avatar size (`sm`=32px, `md`=40px, `lg`=56px) |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Sizes
+
+```tsx
+<Avatar src="/avatar.jpg" name="Ana" size="sm" />
+<Avatar src="/avatar.jpg" name="Ana" size="md" />
+<Avatar src="/avatar.jpg" name="Ana" size="lg" />
+```
+
+### Initials fallback
+
+```tsx
+<Avatar name="John Doe" size="md" />
+<Avatar name="Ana García" size="lg" />
+```

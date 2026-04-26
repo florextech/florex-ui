@@ -1,0 +1,80 @@
+# Tabs
+
+A tabbed interface with trigger buttons and content panels.
+
+## Import
+
+```tsx
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Tabs defaultValue="tab1">
+  <TabsList>
+    <TabsTrigger value="tab1">Overview</TabsTrigger>
+    <TabsTrigger value="tab2">Settings</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tab1">Overview content here.</TabsContent>
+  <TabsContent value="tab2">Settings content here.</TabsContent>
+</Tabs>
+```
+
+## Sub-components
+
+### Tabs
+
+Root container that manages the active tab state.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| defaultValue | `string` | — | Initially active tab value |
+| children | `ReactNode` | — | TabsList and TabsContent elements |
+| className | `string` | — | Additional CSS classes |
+
+### TabsList
+
+Container for tab triggers, styled as a pill bar.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | TabsTrigger elements |
+| className | `string` | — | Additional CSS classes |
+
+### TabsTrigger
+
+A single tab button.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| value | `string` | — | Tab identifier (must match a TabsContent value) |
+| children | `ReactNode` | — | Tab label |
+| className | `string` | — | Additional CSS classes |
+
+### TabsContent
+
+Content panel shown when its value matches the active tab.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| value | `string` | — | Tab identifier |
+| children | `ReactNode` | — | Panel content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With icons
+
+```tsx
+import { User, Gear } from '@phosphor-icons/react';
+
+<Tabs defaultValue="profile">
+  <TabsList>
+    <TabsTrigger value="profile"><User size={14} /> Profile</TabsTrigger>
+    <TabsTrigger value="settings"><Gear size={14} /> Settings</TabsTrigger>
+  </TabsList>
+  <TabsContent value="profile">Profile details...</TabsContent>
+  <TabsContent value="settings">Settings panel...</TabsContent>
+</Tabs>
+```

@@ -1,0 +1,106 @@
+# Table
+
+A composable data table with header, body, rows, and cells.
+
+## Import
+
+```tsx
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Name</TableHead>
+      <TableHead>Role</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>Ana García</TableCell>
+      <TableCell>Admin</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+```
+
+## Sub-components
+
+### Table
+
+Root `<table>` wrapped in a scrollable container.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+### TableHeader
+
+`<thead>` element.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+### TableBody
+
+`<tbody>` element.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+### TableRow
+
+`<tr>` element with hover highlight and bottom border.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+### TableHead
+
+`<th>` element with uppercase muted styling.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+### TableCell
+
+`<td>` element.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Full table
+
+```tsx
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Name</TableHead>
+      <TableHead>Email</TableHead>
+      <TableHead>Status</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>Ana García</TableCell>
+      <TableCell>ana@example.com</TableCell>
+      <TableCell><Status value="success">Active</Status></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>John Doe</TableCell>
+      <TableCell>john@example.com</TableCell>
+      <TableCell><Status value="warning">Pending</Status></TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+```

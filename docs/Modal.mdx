@@ -1,0 +1,46 @@
+# Modal
+
+A centered dialog overlay built on the native `<dialog>` element.
+
+## Import
+
+```tsx
+import { Modal } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+const [open, setOpen] = useState(false);
+
+<Button onClick={() => setOpen(true)}>Open Modal</Button>
+<Modal open={open} onClose={() => setOpen(false)}>
+  <h2>Confirm Action</h2>
+  <p>Are you sure you want to proceed?</p>
+  <Button onClick={() => setOpen(false)}>Close</Button>
+</Modal>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| open | `boolean` | — | Controls visibility |
+| onClose | `() => void` | — | Called when the dialog is closed (including Escape key) |
+| children | `ReactNode` | — | Modal content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Confirmation dialog
+
+```tsx
+<Modal open={open} onClose={() => setOpen(false)}>
+  <Heading as="h3" size="md">Delete item?</Heading>
+  <Text variant="muted" size="sm">This action cannot be undone.</Text>
+  <Stack direction="row" gap="sm" className="mt-4 justify-end">
+    <Button variant="secondary" onClick={() => setOpen(false)}>Cancel</Button>
+    <Button variant="danger" onClick={handleDelete}>Delete</Button>
+  </Stack>
+</Modal>
+```

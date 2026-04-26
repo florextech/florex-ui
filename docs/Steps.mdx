@@ -1,0 +1,53 @@
+# Steps
+
+A horizontal stepper for multi-step workflows.
+
+## Import
+
+```tsx
+import { Steps, Step } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Steps current={1}>
+  <Step title="Account" />
+  <Step title="Profile" />
+  <Step title="Review" />
+</Steps>
+```
+
+## Sub-components
+
+### Steps
+
+Root container that renders numbered circles with connecting lines.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| current | `number` | — | Zero-based index of the current step |
+| children | `ReactNode` | — | Step elements |
+| className | `string` | — | Additional CSS classes |
+
+### Step
+
+A single step label.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| title | `string` | — | Step title |
+| description | `string` | — | Optional description below the title |
+
+## Examples
+
+### With descriptions
+
+```tsx
+<Steps current={2}>
+  <Step title="Account" description="Create your account" />
+  <Step title="Profile" description="Set up your profile" />
+  <Step title="Review" description="Confirm your details" />
+  <Step title="Done" description="All set!" />
+</Steps>
+```

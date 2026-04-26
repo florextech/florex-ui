@@ -1,0 +1,41 @@
+# Drawer
+
+A slide-in panel from the left or right edge, built on the native `<dialog>` element.
+
+## Import
+
+```tsx
+import { Drawer } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+const [open, setOpen] = useState(false);
+
+<Button onClick={() => setOpen(true)}>Open Drawer</Button>
+<Drawer open={open} onClose={() => setOpen(false)}>
+  <p>Drawer content here.</p>
+</Drawer>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| open | `boolean` | — | Controls visibility |
+| onClose | `() => void` | — | Called when the drawer is closed |
+| side | `'left' \| 'right'` | `'right'` | Which edge the drawer slides from |
+| children | `ReactNode` | — | Drawer content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Left side
+
+```tsx
+<Drawer open={open} onClose={() => setOpen(false)} side="left">
+  <h2>Navigation</h2>
+  <nav>...</nav>
+</Drawer>
+```

@@ -1,0 +1,45 @@
+# Switch
+
+A toggle switch input with optional label.
+
+## Import
+
+```tsx
+import { Switch } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Switch label="Dark mode" />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| label | `string` | — | Text label displayed next to the switch |
+| id | `string` | — | HTML id (links label to input) |
+| className | `string` | — | Additional CSS classes |
+
+Also accepts all native `<input>` HTML attributes (except `type`).
+
+## Examples
+
+### Controlled
+
+```tsx
+const [enabled, setEnabled] = useState(false);
+
+<Switch
+  label="Enable notifications"
+  checked={enabled}
+  onChange={(e) => setEnabled(e.target.checked)}
+/>
+```
+
+### Disabled
+
+```tsx
+<Switch label="Locked setting" disabled checked />
+```

@@ -1,0 +1,32 @@
+# FormMessage
+
+Displays a form validation error message.
+
+## Import
+
+```tsx
+import { FormMessage } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<FormMessage message="This field is required." />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| message | `string` | — | Error message text. Renders nothing if empty. |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With form field
+
+```tsx
+<Label htmlFor="email">Email</Label>
+<Input id="email" placeholder="you@example.com" />
+<FormMessage message="Please enter a valid email address." />
+```

@@ -1,0 +1,36 @@
+# Popover
+
+A floating panel that appears on click, positioned below the trigger.
+
+## Import
+
+```tsx
+import { Popover } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Popover trigger={<Button variant="secondary">Info</Button>}>
+  <p>This is the popover content.</p>
+</Popover>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| trigger | `ReactNode` | — | Element rendered as the toggle button |
+| children | `ReactNode` | — | Popover content |
+| className | `string` | — | Additional CSS classes on the content panel |
+
+## Examples
+
+### Rich content
+
+```tsx
+<Popover trigger={<Button variant="ghost">Details</Button>}>
+  <Heading as="h4" size="sm">Popover Title</Heading>
+  <Text variant="muted" size="sm">Additional context or actions.</Text>
+</Popover>
+```

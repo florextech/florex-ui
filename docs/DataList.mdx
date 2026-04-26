@@ -1,0 +1,51 @@
+# DataList
+
+A key-value list rendered as a definition list (`<dl>`).
+
+## Import
+
+```tsx
+import { DataList, DataListItem } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<DataList>
+  <DataListItem label="Name">John Doe</DataListItem>
+  <DataListItem label="Email">john@example.com</DataListItem>
+</DataList>
+```
+
+## Sub-components
+
+### DataList
+
+Root `<dl>` container with a two-column grid layout.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | `ReactNode` | — | DataListItem elements |
+| className | `string` | — | Additional CSS classes |
+
+### DataListItem
+
+A single key-value pair rendered as `<dt>` + `<dd>`.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| label | `string` | — | The key/label text |
+| children | `ReactNode` | — | The value content |
+
+## Examples
+
+### Profile details
+
+```tsx
+<DataList>
+  <DataListItem label="Full Name">Ana García</DataListItem>
+  <DataListItem label="Role">Admin</DataListItem>
+  <DataListItem label="Status">Active</DataListItem>
+  <DataListItem label="Joined">Jan 2024</DataListItem>
+</DataList>
+```

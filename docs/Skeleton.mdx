@@ -1,0 +1,49 @@
+# Skeleton
+
+A pulsing placeholder for loading states.
+
+## Import
+
+```tsx
+import { Skeleton } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Skeleton />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| circle | `boolean` | `false` | Renders as a circle (40×40px) instead of a rectangle |
+| className | `string` | — | Additional CSS classes (use to set custom width/height) |
+
+## Examples
+
+### Text placeholder
+
+```tsx
+<Skeleton className="h-4 w-48" />
+<Skeleton className="h-4 w-32" />
+```
+
+### Circle (avatar placeholder)
+
+```tsx
+<Skeleton circle />
+```
+
+### Card placeholder
+
+```tsx
+<Card>
+  <Stack gap="sm">
+    <Skeleton circle />
+    <Skeleton className="h-4 w-3/4" />
+    <Skeleton className="h-4 w-1/2" />
+  </Stack>
+</Card>
+```

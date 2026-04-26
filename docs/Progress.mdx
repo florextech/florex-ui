@@ -1,0 +1,38 @@
+# Progress
+
+A horizontal progress bar.
+
+## Import
+
+```tsx
+import { Progress } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Progress value={60} />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| value | `number` | — | Progress percentage (0–100, clamped) |
+| size | `'sm' \| 'md'` | `'md'` | Bar height (`sm`=6px, `md`=12px) |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Sizes
+
+```tsx
+<Progress value={40} size="sm" />
+<Progress value={75} size="md" />
+```
+
+### Full width
+
+```tsx
+<Progress value={100} />
+```

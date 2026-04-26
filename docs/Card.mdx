@@ -1,0 +1,91 @@
+# Card
+
+A container with border, background blur, and optional sub-components for structured content.
+
+## Import
+
+```tsx
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>A short description.</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>Card body content goes here.</p>
+  </CardContent>
+</Card>
+```
+
+## Sub-components
+
+### Card
+
+Root container.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| variant | `'default' \| 'muted' \| 'hover'` | `'default'` | Visual style. `hover` adds glow on hover. |
+| padding | `'none' \| 'sm' \| 'md' \| 'lg'` | `'md'` | Internal padding |
+| className | `string` | — | Additional CSS classes |
+
+### CardHeader
+
+Header section with vertical spacing.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+### CardTitle
+
+Heading rendered as `<h3>`.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+### CardDescription
+
+Muted paragraph below the title.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+### CardContent
+
+Body content area.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### Hover variant
+
+```tsx
+<Card variant="hover">
+  <CardHeader>
+    <CardTitle>Interactive Card</CardTitle>
+    <CardDescription>Glows on hover.</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>Hover over this card to see the effect.</p>
+  </CardContent>
+</Card>
+```
+
+### Muted variant
+
+```tsx
+<Card variant="muted" padding="lg">
+  <p>A subtle background card.</p>
+</Card>
+```

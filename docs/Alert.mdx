@@ -1,0 +1,48 @@
+# Alert
+
+Displays a contextual feedback message with optional icon.
+
+## Import
+
+```tsx
+import { Alert } from '@florex/ui';
+```
+
+## Usage
+
+```tsx
+<Alert variant="info">Your changes have been saved.</Alert>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| variant | `'info' \| 'success' \| 'warning' \| 'danger'` | `'info'` | Visual style of the alert |
+| icon | `ReactNode` | — | Icon displayed before the content |
+| children | `ReactNode` | — | Alert message content |
+| className | `string` | — | Additional CSS classes |
+
+## Examples
+
+### With icon
+
+```tsx
+import { Info, CheckCircle, Warning, XCircle } from '@phosphor-icons/react';
+
+<Alert variant="info" icon={<Info size={18} />}>
+  A new version is available.
+</Alert>
+
+<Alert variant="success" icon={<CheckCircle size={18} />}>
+  Your profile has been updated.
+</Alert>
+
+<Alert variant="warning" icon={<Warning size={18} />}>
+  Your trial expires in 3 days.
+</Alert>
+
+<Alert variant="danger" icon={<XCircle size={18} />}>
+  Failed to save changes.
+</Alert>
+```
