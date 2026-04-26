@@ -2,7 +2,7 @@
 export { Button, buttonVariants, type ButtonProps } from "./components/Button/Button";
 export { Input, type InputProps } from "./components/Input/Input";
 export { Textarea, type TextareaProps } from "./components/Textarea/Textarea";
-export { Card, cardVariants, type CardProps } from "./components/Card/Card";
+export { Card, cardVariants, CardHeader, CardTitle, CardDescription, CardContent, type CardProps } from "./components/Card/Card";
 export { Badge, badgeVariants, type BadgeProps } from "./components/Badge/Badge";
 export { Modal, type ModalProps } from "./components/Modal/Modal";
 export { EmptyState, type EmptyStateProps } from "./components/EmptyState/EmptyState";
@@ -13,6 +13,9 @@ export { Divider, type DividerProps } from "./components/Divider/Divider";
 export { Text, textVariants, type TextProps } from "./components/Text/Text";
 export { Alert, alertVariants, type AlertProps } from "./components/Alert/Alert";
 export { Switch, type SwitchProps } from "./components/Switch/Switch";
+export { Label, type LabelProps } from "./components/Label/Label";
+export { Select, type SelectProps } from "./components/Select/Select";
+export { FormMessage, type FormMessageProps } from "./components/FormMessage/FormMessage";
 
 // Layouts
 export { Container, type ContainerProps } from "./layouts/Container/Container";
