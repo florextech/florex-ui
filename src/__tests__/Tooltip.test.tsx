@@ -4,12 +4,22 @@ import { Tooltip } from "../components/Tooltip/Tooltip";
 
 describe("Tooltip", () => {
   it("renders children", () => {
-    render(<Tooltip content="Help"><button>Hover</button></Tooltip>);
-    expect(screen.getByRole("button", { name: "Hover" })).toBeInTheDocument();
+    render(<Tooltip content="Help text">Hover me</Tooltip>);
+    expect(screen.getByText("Hover me")).toBeInTheDocument();
   });
 
-  it("sets title attribute with content", () => {
-    const { container } = render(<Tooltip content="Help text"><span>Icon</span></Tooltip>);
-    expect(container.firstChild).toHaveAttribute("title", "Help text");
+  it("renders tooltip content with role", () => {
+    render(<Tooltip content="Help text">Hover me</Tooltip>);
+    expect(screen.getByRole("tooltip")).toHaveTextContent("Help text");
+  });
+
+  it("tooltip is hidden by default (opacity-0)", () => {
+    render(<Tooltip content="Tip">Target</Tooltip>);
+    expect(screen.getByRole("tooltip")).toHaveClass("opacity-0");
+  });
+
+  it("supports side prop", () => {
+    render(<Tooltip content="Tip" side="bottom">Target</Tooltip>);
+    expect(screen.getByRole("tooltip")).toHaveClass("top-full");
   });
 });
