@@ -3,6 +3,8 @@ import { type ComponentType, type ReactNode, createElement } from "react";
 type IconComponent = ComponentType<{ size?: number; weight?: string; className?: string }>;
 type IconProps = Readonly<{ size?: number; className?: string }>;
 
+declare const require: ((id: string) => Record<string, unknown>) | undefined;
+
 let _loaded = false;
 let _phosphor: Record<string, IconComponent> | null = null;
 
@@ -10,9 +12,9 @@ function getPhosphor(): Record<string, IconComponent> | null {
   if (_loaded) return _phosphor;
   _loaded = true;
   try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const r = typeof require === "function" ? require : null;
-    _phosphor = r ? (r("@phosphor-icons/react") as Record<string, IconComponent>) : null;
+    _phosphor = typeof require !== "undefined"
+      ? (require("@phosphor-icons/react") as Record<string, IconComponent>)
+      : null;
   } catch {
     _phosphor = null;
   }
