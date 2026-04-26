@@ -1,0 +1,180 @@
+# @florex/ui
+
+Florex Labs shared UI library — dark-first React components and design tokens built with Tailwind CSS v4, CVA, and TypeScript.
+
+## Install
+
+```bash
+pnpm add @florex/ui
+# peer deps
+pnpm add react react-dom tailwindcss
+```
+
+## Setup
+
+Import the CSS tokens in your app entry point:
+
+```ts
+import "@florex/ui/florex.css";
+```
+
+This provides all `:root` CSS variables, body background, typography defaults, and selection styles.
+
+## Components
+
+### Button
+
+```tsx
+import { Button } from "@florex/ui";
+
+<Button variant="primary" size="md">Save</Button>
+<Button variant="secondary">Cancel</Button>
+<Button variant="ghost" size="sm">Edit</Button>
+<Button variant="danger" loading>Deleting…</Button>
+```
+
+Variants: `primary` | `secondary` | `ghost` | `danger`
+Sizes: `sm` | `md` | `lg`
+
+### Card
+
+```tsx
+import { Card } from "@florex/ui";
+
+<Card>Default card with p-6</Card>
+<Card variant="hover" padding="lg">Hover glow card</Card>
+<Card variant="muted" padding="sm">Muted surface</Card>
+```
+
+### Badge
+
+```tsx
+import { Badge } from "@florex/ui";
+
+<Badge tone="brand">New</Badge>
+<Badge tone="danger">Error</Badge>
+<Badge tone="warning">Beta</Badge>
+```
+
+Tones: `neutral` | `brand` | `success` | `warning` | `danger`
+
+### Input & Textarea
+
+```tsx
+import { Input, Textarea } from "@florex/ui";
+
+<Input placeholder="Email" type="email" />
+<Textarea placeholder="Message" rows={4} />
+```
+
+### Modal
+
+```tsx
+import { Modal, Button } from "@florex/ui";
+
+<Modal open={isOpen} onClose={() => setIsOpen(false)}>
+  <h2>Confirm</h2>
+  <p>Are you sure?</p>
+  <Button onClick={() => setIsOpen(false)}>Close</Button>
+</Modal>
+```
+
+### EmptyState
+
+```tsx
+import { EmptyState, Button } from "@florex/ui";
+
+<EmptyState
+  title="No bots yet"
+  description="Create your first bot to get started."
+  action={<Button size="sm">Create Bot</Button>}
+/>
+```
+
+### Spinner
+
+```tsx
+import { Spinner } from "@florex/ui";
+
+<Spinner className="size-6" />
+```
+
+## Layouts
+
+### Container
+
+```tsx
+import { Container } from "@florex/ui";
+
+<Container>Content with max-w-[1280px] and responsive padding</Container>
+```
+
+### Section
+
+```tsx
+import { Section } from "@florex/ui";
+
+<Section eyebrow="Features" title="Why Florex?" description="Built for developers." glow>
+  <div className="grid grid-cols-3 gap-6">{/* cards */}</div>
+</Section>
+```
+
+### Navbar
+
+```tsx
+import { Navbar, Button } from "@florex/ui";
+
+<Navbar logo={<span>Florex</span>} actions={<Button size="sm">Sign In</Button>}>
+  <a href="/docs">Docs</a>
+  <a href="/blog">Blog</a>
+</Navbar>
+```
+
+## Tokens
+
+```ts
+import { colors, spacing, radius, shadows } from "@florex/ui";
+
+colors.brand[700]; // "#d7ff6d"
+spacing.lg;        // "1.5rem"
+radius.xl;         // "1.5rem"
+shadows.glow;      // glow shadow string
+```
+
+## Utility
+
+```ts
+import { cn } from "@florex/ui";
+
+cn("px-4 py-2", isActive && "bg-brand-700", className);
+```
+
+## CSS Variables
+
+All tokens are available as CSS custom properties via `florex.css`:
+
+```
+--bg, --surface, --surface-muted, --foreground, --muted, --border
+--brand-900, --brand-700, --brand-600, --brand-500, --brand-300
+--danger, --warning, --success
+--radius-sm, --radius-md, --radius-lg, --radius-xl, --radius-full
+--shadow-card, --shadow-glow
+--font-montserrat, --font-poppins
+```
+
+## Migration Notes
+
+### From chatbot-studio-app
+1. Replace local `lib/utils.ts` (`cn`) with `import { cn } from "@florex/ui"`
+2. Replace `components/ui/button.tsx` with `import { Button } from "@florex/ui"`
+3. Replace `components/feedback/empty-state.tsx` with `import { EmptyState } from "@florex/ui"`
+4. Import `@florex/ui/florex.css` in `app/globals.css` and remove duplicated `:root` tokens
+
+### From florex-labs-landing / logcat-desk-web (Astro)
+1. Import `@florex/ui/florex.css` in your global CSS and remove duplicated `:root` tokens
+2. For React components, add `@astrojs/react` and use them in `.astro` files as client islands
+3. Or continue using Astro components and just consume the CSS tokens
+
+## License
+
+MIT
