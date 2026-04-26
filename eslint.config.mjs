@@ -1,15 +1,13 @@
-import js from "@eslint/js";
+import tseslint from "typescript-eslint";
 
-export default [
-  js.configs.recommended,
+export default tseslint.config(
+  { ignores: ["dist/", "storybook-static/", "node_modules/", "scripts/"] },
+  ...tseslint.configs.recommended,
   {
-    files: ["src/**/*.{ts,tsx}"],
-    languageOptions: {
-      parserOptions: { ecmaFeatures: { jsx: true } },
-    },
     rules: {
-      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+      "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/no-require-imports": "off",
     },
   },
-  { ignores: ["dist/", "storybook-static/", "node_modules/"] },
-];
+);
