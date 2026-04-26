@@ -35,6 +35,7 @@ export { Popover, type PopoverProps } from "./components/Popover/Popover";
 export { Pagination, type PaginationProps } from "./components/Pagination/Pagination";
 export { Stack, type StackProps } from "./components/Stack/Stack";
 export { VisuallyHidden } from "./components/VisuallyHidden/VisuallyHidden";
+export { CopyCommand, type CopyCommandProps } from "./components/CopyCommand/CopyCommand";
 export { Blockquote } from "./components/Blockquote/Blockquote";
 export { CodeBlock } from "./components/CodeBlock/CodeBlock";
 export { Highlight } from "./components/Highlight/Highlight";
