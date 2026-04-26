@@ -5,5 +5,5 @@ const meta: Meta<typeof Spinner> = { title: "Components/Spinner", component: Spi
 export default meta;
 type Story = StoryObj<typeof Spinner>;
 
-export const Default: Story = { args: { className: "size-6 text-[var(--brand-600)]" } };
-export const Small: Story = { args: { className: "size-4 text-[var(--muted)]" } };
+export const Default: Story = { args: { className: "size-6 text-(--brand-600)" } };
+export const Small: Story = { args: { className: "size-4 text-(--muted)" } };

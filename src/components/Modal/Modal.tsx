@@ -23,7 +23,7 @@ function Modal({ open, onClose, children, className }: ModalProps) {
       ref={dialogRef}
       onClose={onClose}
       className={cn(
-        "m-auto max-w-lg rounded-2xl border bg-[var(--surface)] p-6 text-[var(--foreground)] backdrop:bg-black/60 backdrop:backdrop-blur-sm",
+        "m-auto max-w-lg rounded-2xl border bg-(--surface) p-6 text-(--foreground) backdrop:bg-black/60 backdrop:backdrop-blur-sm",
         className,
       )}
     >

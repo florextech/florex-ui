@@ -15,11 +15,11 @@ export const Right: StoryObj = {
       <>
         <Button variant="secondary" onClick={() => setOpen(true)}><Gear size={16} /> Settings</Button>
         <Drawer open={open} onClose={() => setOpen(false)} side="right">
-          <div className="flex items-center justify-between border-b border-[var(--border)] p-4">
+          <div className="flex items-center justify-between border-b border-(--border) p-4">
             <h2 className="text-lg font-semibold">Settings</h2>
             <IconButton icon={<X size={16} />} aria-label="Close" variant="ghost" size="sm" onClick={() => setOpen(false)} />
           </div>
-          <div className="p-4 text-sm text-[var(--muted)]">Drawer content goes here.</div>
+          <div className="p-4 text-sm text-(--muted)">Drawer content goes here.</div>
         </Drawer>
       </>
     );

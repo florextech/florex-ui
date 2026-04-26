@@ -15,7 +15,7 @@ describe("Text", () => {
 
   it("applies muted variant", () => {
     render(<Text variant="muted">Muted</Text>);
-    expect(screen.getByText("Muted")).toHaveClass("text-[var(--muted)]");
+    expect(screen.getByText("Muted")).toHaveClass("text-(--muted)");
   });
 
   it("applies size and weight", () => {

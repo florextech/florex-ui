@@ -9,7 +9,7 @@ function Skeleton({ className, circle }: SkeletonProps) {
   return (
     <div
       className={cn(
-        "animate-pulse bg-[var(--surface-muted)]",
+        "animate-pulse bg-(--surface-muted)",
         circle ? "size-10 rounded-full" : "h-4 w-full rounded-lg",
         className,
       )}

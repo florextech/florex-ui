@@ -16,5 +16,5 @@ type Story = StoryObj<typeof IconButton>;
 export const Primary: Story = { args: { icon: <Plus size={18} weight="bold" />, "aria-label": "Add", variant: "primary" } };
 export const Secondary: Story = { args: { icon: <Gear size={18} />, "aria-label": "Settings", variant: "secondary" } };
 export const Ghost: Story = { args: { icon: <MagnifyingGlass size={18} />, "aria-label": "Search", variant: "ghost" } };
-export const Danger: Story = { args: { icon: <TrashSimple size={18} weight="bold" />, "aria-label": "Delete", variant: "ghost", className: "text-[var(--danger)] hover:bg-[rgb(239_68_68/0.1)]" } };
+export const Danger: Story = { args: { icon: <TrashSimple size={18} weight="bold" />, "aria-label": "Delete", variant: "ghost", className: "text-(--danger) hover:bg-[rgb(239_68_68/0.1)]" } };
 export const Close: Story = { args: { icon: <X size={16} weight="bold" />, "aria-label": "Close", variant: "ghost", size: "sm" } };

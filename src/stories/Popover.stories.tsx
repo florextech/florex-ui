@@ -10,9 +10,9 @@ export const Default: StoryObj = {
   render: () => (
     <Popover trigger={<IconButton icon={<DotsThreeVertical size={18} />} aria-label="More options" variant="ghost" />}>
       <div className="space-y-1 p-1">
-        <button className="w-full rounded-lg px-3 py-1.5 text-left text-sm text-[var(--foreground)] hover:bg-[rgb(255_255_255/0.05)]">Edit</button>
-        <button className="w-full rounded-lg px-3 py-1.5 text-left text-sm text-[var(--foreground)] hover:bg-[rgb(255_255_255/0.05)]">Duplicate</button>
-        <button className="w-full rounded-lg px-3 py-1.5 text-left text-sm text-[var(--danger)] hover:bg-[rgb(239_68_68/0.1)]">Delete</button>
+        <button className="w-full rounded-lg px-3 py-1.5 text-left text-sm text-(--foreground) hover:bg-[rgb(255_255_255/0.05)]">Edit</button>
+        <button className="w-full rounded-lg px-3 py-1.5 text-left text-sm text-(--foreground) hover:bg-[rgb(255_255_255/0.05)]">Duplicate</button>
+        <button className="w-full rounded-lg px-3 py-1.5 text-left text-sm text-(--danger) hover:bg-[rgb(239_68_68/0.1)]">Delete</button>
       </div>
     </Popover>
   ),

@@ -15,14 +15,14 @@ const positions = {
   right: "left-full top-1/2 -translate-y-1/2 ml-2",
 };
 
-function Tooltip({ content, children, side = "top", className }: TooltipProps) {
+function Tooltip({ content, children, side = "top", className }: Readonly<TooltipProps>) {
   return (
     <span className={cn("group relative inline-flex", className)}>
       {children}
       <span
         role="tooltip"
         className={cn(
-          "pointer-events-none absolute z-50 whitespace-nowrap rounded-lg border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1.5 text-xs text-[var(--foreground)] shadow-lg",
+          "pointer-events-none absolute z-50 whitespace-nowrap rounded-lg border border-(--border) bg-(--surface) px-2.5 py-1.5 text-xs text-(--foreground) shadow-lg",
           "opacity-0 transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100",
           positions[side],
         )}

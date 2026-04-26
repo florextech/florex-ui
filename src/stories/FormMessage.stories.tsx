@@ -10,7 +10,7 @@ export const Default: StoryObj = {
   render: () => (
     <div className="max-w-xs space-y-1">
       <Label htmlFor="name">Name</Label>
-      <Input id="name" className="border-[var(--danger)]" />
+      <Input id="name" className="border-(--danger)" />
       <FormMessage message="This field is required" />
     </div>
   ),

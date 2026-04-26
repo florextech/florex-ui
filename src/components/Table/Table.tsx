@@ -29,14 +29,14 @@ TableRow.displayName = "TableRow";
 
 const TableHead = forwardRef<HTMLTableCellElement, ThHTMLAttributes<HTMLTableCellElement>>(
   ({ className, ...props }, ref) => (
-    <th ref={ref} className={cn("h-10 px-3 text-left align-middle text-xs font-semibold uppercase tracking-wider text-[var(--muted)]", className)} {...props} />
+    <th ref={ref} className={cn("h-10 px-3 text-left align-middle text-xs font-semibold uppercase tracking-wider text-(--muted)", className)} {...props} />
   ),
 );
 TableHead.displayName = "TableHead";
 
 const TableCell = forwardRef<HTMLTableCellElement, TdHTMLAttributes<HTMLTableCellElement>>(
   ({ className, ...props }, ref) => (
-    <td ref={ref} className={cn("px-3 py-3 align-middle text-[var(--foreground)]", className)} {...props} />
+    <td ref={ref} className={cn("px-3 py-3 align-middle text-(--foreground)", className)} {...props} />
   ),
 );
 TableCell.displayName = "TableCell";

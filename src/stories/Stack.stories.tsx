@@ -16,9 +16,9 @@ export const Column: Story = {
   args: { direction: "column", gap: "md" },
   render: (args) => (
     <Stack {...args}>
-      <div className="rounded bg-[var(--surface-muted)] p-4">Item 1</div>
-      <div className="rounded bg-[var(--surface-muted)] p-4">Item 2</div>
-      <div className="rounded bg-[var(--surface-muted)] p-4">Item 3</div>
+      <div className="rounded bg-(--surface-muted) p-4">Item 1</div>
+      <div className="rounded bg-(--surface-muted) p-4">Item 2</div>
+      <div className="rounded bg-(--surface-muted) p-4">Item 3</div>
     </Stack>
   ),
 };
@@ -27,8 +27,8 @@ export const Row: Story = {
   args: { direction: "row", gap: "sm" },
   render: (args) => (
     <Stack {...args}>
-      <div className="rounded bg-[var(--surface-muted)] p-4">A</div>
-      <div className="rounded bg-[var(--surface-muted)] p-4">B</div>
+      <div className="rounded bg-(--surface-muted) p-4">A</div>
+      <div className="rounded bg-(--surface-muted) p-4">B</div>
     </Stack>
   ),
 };

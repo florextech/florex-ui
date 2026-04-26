@@ -10,7 +10,7 @@ describe("Alert", () => {
 
   it("applies danger variant", () => {
     render(<Alert variant="danger">Error</Alert>);
-    expect(screen.getByRole("alert")).toHaveClass("text-[var(--danger)]");
+    expect(screen.getByRole("alert")).toHaveClass("text-(--danger)");
   });
 
   it("renders icon", () => {

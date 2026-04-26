@@ -30,7 +30,7 @@ interface TabsListProps {
 
 function TabsList({ children, className }: TabsListProps) {
   return (
-    <div role="tablist" className={cn("inline-flex gap-1 rounded-xl border bg-[var(--surface)] p-1", className)}>
+    <div role="tablist" className={cn("inline-flex gap-1 rounded-xl border bg-(--surface) p-1", className)}>
       {children}
     </div>
   );
@@ -53,8 +53,8 @@ function TabsTrigger({ value, children, className }: TabsTriggerProps) {
       className={cn(
         "rounded-lg px-3 py-1.5 text-sm font-medium transition-colors",
         active
-          ? "bg-[var(--surface-muted)] text-[var(--foreground)]"
-          : "text-[var(--muted)] hover:text-[var(--foreground)]",
+          ? "bg-(--surface-muted) text-(--foreground)"
+          : "text-(--muted) hover:text-(--foreground)",
         className,
       )}
     >

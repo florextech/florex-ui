@@ -37,10 +37,10 @@ function Select({ options, value, onChange, placeholder = "Select…", disabled,
         disabled={disabled}
         onClick={() => setOpen(!open)}
         className={cn(
-          "flex h-10 w-full items-center justify-between rounded-xl border bg-[var(--surface)] px-3 text-sm transition",
-          "hover:border-[rgb(189_241_70/0.28)] focus:border-[var(--brand-600)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-600)]",
+          "flex h-10 w-full items-center justify-between rounded-xl border bg-(--surface) px-3 text-sm transition",
+          "hover:border-[rgb(189_241_70/0.28)] focus:border-(--brand-600) focus:outline-none focus:ring-1 focus:ring-(--brand-600)",
           "disabled:cursor-not-allowed disabled:opacity-50",
-          selected ? "text-[var(--foreground)]" : "text-[var(--muted)]",
+          selected ? "text-(--foreground)" : "text-(--muted)",
         )}
       >
         <span className="truncate">{selected ? selected.label : placeholder}</span>
@@ -48,7 +48,7 @@ function Select({ options, value, onChange, placeholder = "Select…", disabled,
       </button>
 
       {open && (
-        <ul className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-xl border bg-[var(--surface)] py-1 shadow-lg">
+        <ul className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-xl border bg-(--surface) py-1 shadow-lg">
           {options.map((opt) => (
             <li key={opt.value}>
               <button
@@ -57,8 +57,8 @@ function Select({ options, value, onChange, placeholder = "Select…", disabled,
                 className={cn(
                   "flex w-full px-3 py-2 text-left text-sm transition-colors",
                   opt.value === value
-                    ? "bg-[rgb(189_241_70/0.1)] text-[var(--brand-700)]"
-                    : "text-[var(--foreground)] hover:bg-[rgb(255_255_255/0.05)]",
+                    ? "bg-[rgb(189_241_70/0.1)] text-(--brand-700)"
+                    : "text-(--foreground) hover:bg-[rgb(255_255_255/0.05)]",
                 )}
               >
                 {opt.label}

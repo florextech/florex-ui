@@ -8,12 +8,12 @@ export default { title: "Layouts/Navbar" } as Meta;
 export const Default: StoryObj = {
   render: () => (
     <Navbar
-      logo={<span className="flex items-center gap-2 text-lg font-bold"><Rocket size={22} weight="fill" className="text-[var(--brand-600)]" /> Florex</span>}
+      logo={<span className="flex items-center gap-2 text-lg font-bold"><Rocket size={22} weight="fill" className="text-(--brand-600)" /> Florex</span>}
       actions={<Button size="sm"><SignIn size={16} /> Sign In</Button>}
     >
-      <a href="#" className="text-sm text-[var(--muted)] hover:text-[var(--foreground)]">Docs</a>
-      <a href="#" className="text-sm text-[var(--muted)] hover:text-[var(--foreground)]">Blog</a>
-      <a href="#" className="text-sm text-[var(--muted)] hover:text-[var(--foreground)]">Pricing</a>
+      <a href="#" className="text-sm text-(--muted) hover:text-(--foreground)">Docs</a>
+      <a href="#" className="text-sm text-(--muted) hover:text-(--foreground)">Blog</a>
+      <a href="#" className="text-sm text-(--muted) hover:text-(--foreground)">Pricing</a>
     </Navbar>
   ),
 };

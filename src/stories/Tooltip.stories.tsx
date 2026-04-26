@@ -26,7 +26,7 @@ export const Bottom: Story = {
   render: () => (
     <div className="flex justify-center pb-12">
       <Tooltip content="More info about this feature" side="bottom">
-        <span className="inline-flex cursor-help items-center gap-1 text-sm text-[var(--muted)]">
+        <span className="inline-flex cursor-help items-center gap-1 text-sm text-(--muted)">
           <Info size={14} /> What is this?
         </span>
       </Tooltip>
@@ -49,7 +49,7 @@ export const OnIconButton: StoryObj = {
   render: () => (
     <div className="flex gap-2 pt-12">
       <Tooltip content="Edit"><IconButton icon={<Gear size={16} />} aria-label="Edit" variant="ghost" /></Tooltip>
-      <Tooltip content="Delete"><IconButton icon={<TrashSimple size={16} />} aria-label="Delete" variant="ghost" className="text-[var(--danger)]" /></Tooltip>
+      <Tooltip content="Delete"><IconButton icon={<TrashSimple size={16} />} aria-label="Delete" variant="ghost" className="text-(--danger)" /></Tooltip>
     </div>
   ),
 };

@@ -7,13 +7,13 @@ interface BlockquoteProps {
   className?: string;
 }
 
-function Blockquote({ children, cite, className }: BlockquoteProps) {
+function Blockquote({ children, cite, className }: Readonly<BlockquoteProps>) {
   return (
     <figure className={cn("my-4", className)}>
-      <blockquote className="border-l-2 border-[var(--brand-600)] pl-4 text-sm italic text-[var(--foreground)]">
+      <blockquote className="border-l-2 border-(--brand-600) pl-4 text-sm italic text-(--foreground)">
         {children}
       </blockquote>
-      {cite && <figcaption className="mt-2 pl-4 text-xs text-[var(--muted)]">— {cite}</figcaption>}
+      {cite && <figcaption className="mt-2 pl-4 text-xs text-(--muted)">— {cite}</figcaption>}
     </figure>
   );
 }

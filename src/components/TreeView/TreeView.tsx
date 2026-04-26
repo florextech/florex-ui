@@ -2,8 +2,8 @@ import { type ReactNode } from "react";
 import { cn } from "../../utils/cn";
 import { ChevronRight } from "../../utils/icons";
 
-function TreeView({ children, className }: { children: ReactNode; className?: string }) {
-  return <div className={cn("text-sm text-[var(--foreground)]", className)}>{children}</div>;
+function TreeView({ children, className }: Readonly<{ children: ReactNode; className?: string }>) {
+  return <div className={cn("text-sm text-(--foreground)", className)}>{children}</div>;
 }
 
 interface TreeNodeProps {
@@ -12,7 +12,7 @@ interface TreeNodeProps {
   defaultOpen?: boolean;
 }
 
-function TreeNode({ label, children, defaultOpen }: TreeNodeProps) {
+function TreeNode({ label, children, defaultOpen }: Readonly<TreeNodeProps>) {
   if (!children) {
     return <div className="flex items-center gap-1 py-1 pl-5">{label}</div>;
   }

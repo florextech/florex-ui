@@ -11,7 +11,7 @@ export const Default: StoryObj = {
       <BreadcrumbItem><BreadcrumbLink href="#"><House size={14} /> Home</BreadcrumbLink></BreadcrumbItem>
       <BreadcrumbItem><BreadcrumbLink href="#">Organizations</BreadcrumbLink></BreadcrumbItem>
       <BreadcrumbItem><BreadcrumbLink href="#">Florex Labs</BreadcrumbLink></BreadcrumbItem>
-      <BreadcrumbItem><span className="text-[var(--foreground)]">Settings</span></BreadcrumbItem>
+      <BreadcrumbItem><span className="text-(--foreground)">Settings</span></BreadcrumbItem>
     </Breadcrumb>
   ),
 };

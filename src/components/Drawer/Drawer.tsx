@@ -24,7 +24,7 @@ function Drawer({ open, onClose, side = "right", children, className }: DrawerPr
       ref={ref}
       onClose={onClose}
       className={cn(
-        "fixed inset-0 m-0 h-full max-h-full w-80 max-w-full border-[var(--border)] bg-[var(--surface)] p-6 text-[var(--foreground)] backdrop:bg-black/60",
+        "fixed inset-0 m-0 h-full max-h-full w-80 max-w-full border-(--border) bg-(--surface) p-6 text-(--foreground) backdrop:bg-black/60",
         side === "right" ? "ml-auto border-l" : "mr-auto border-r",
         className,
       )}

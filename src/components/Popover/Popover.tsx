@@ -26,7 +26,7 @@ function Popover({ trigger, children, className }: PopoverProps) {
       {open && (
         <div
           className={cn(
-            "absolute left-0 top-full z-50 mt-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 text-sm text-[var(--foreground)] shadow-lg",
+            "absolute left-0 top-full z-50 mt-2 rounded-xl border border-(--border) bg-(--surface) p-4 text-sm text-(--foreground) shadow-lg",
             className,
           )}
         >

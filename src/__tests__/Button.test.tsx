@@ -20,7 +20,7 @@ describe("Button", () => {
 
   it("applies variant classes", () => {
     render(<Button variant="danger">Delete</Button>);
-    expect(screen.getByRole("button", { name: "Delete" })).toHaveClass("bg-[var(--danger)]");
+    expect(screen.getByRole("button", { name: "Delete" })).toHaveClass("bg-(--danger)");
   });
 
   it("applies size classes", () => {

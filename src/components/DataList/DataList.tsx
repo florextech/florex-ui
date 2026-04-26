@@ -8,8 +8,8 @@ function DataList({ children, className }: { children: ReactNode; className?: st
 function DataListItem({ label, children }: { label: string; children: ReactNode }) {
   return (
     <>
-      <dt className="text-[var(--muted)]">{label}</dt>
-      <dd className="text-[var(--foreground)]">{children}</dd>
+      <dt className="text-(--muted)">{label}</dt>
+      <dd className="text-(--foreground)">{children}</dd>
     </>
   );
 }

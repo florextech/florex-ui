@@ -12,9 +12,9 @@ export const Default: StoryObj = {
         <TabsTrigger value="security">Security</TabsTrigger>
         <TabsTrigger value="billing">Billing</TabsTrigger>
       </TabsList>
-      <TabsContent value="general"><p className="text-sm text-[var(--muted)]">General settings here.</p></TabsContent>
-      <TabsContent value="security"><p className="text-sm text-[var(--muted)]">Security settings here.</p></TabsContent>
-      <TabsContent value="billing"><p className="text-sm text-[var(--muted)]">Billing settings here.</p></TabsContent>
+      <TabsContent value="general"><p className="text-sm text-(--muted)">General settings here.</p></TabsContent>
+      <TabsContent value="security"><p className="text-sm text-(--muted)">Security settings here.</p></TabsContent>
+      <TabsContent value="billing"><p className="text-sm text-(--muted)">Billing settings here.</p></TabsContent>
     </Tabs>
   ),
 };

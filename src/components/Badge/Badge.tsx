@@ -8,15 +8,15 @@ const badgeVariants = cva(
     variants: {
       tone: {
         neutral:
-          "border-[var(--border)] bg-[rgb(23_28_25/0.7)] text-[var(--muted)]",
+          "border-(--border) bg-[rgb(23_28_25/0.7)] text-(--muted)",
         brand:
-          "border-[rgb(189_241_70/0.35)] bg-[rgb(189_241_70/0.08)] text-[var(--brand-700)]",
+          "border-[rgb(189_241_70/0.35)] bg-[rgb(189_241_70/0.08)] text-(--brand-700)",
         success:
-          "border-[rgb(189_241_70/0.35)] bg-[rgb(189_241_70/0.08)] text-[var(--brand-600)]",
+          "border-[rgb(189_241_70/0.35)] bg-[rgb(189_241_70/0.08)] text-(--brand-600)",
         warning:
-          "border-[rgb(245_158_11/0.35)] bg-[rgb(245_158_11/0.08)] text-[var(--warning)]",
+          "border-[rgb(245_158_11/0.35)] bg-[rgb(245_158_11/0.08)] text-(--warning)",
         danger:
-          "border-[rgb(239_68_68/0.35)] bg-[rgb(239_68_68/0.08)] text-[var(--danger)]",
+          "border-[rgb(239_68_68/0.35)] bg-[rgb(239_68_68/0.08)] text-(--danger)",
       },
     },
     defaultVariants: { tone: "neutral" },

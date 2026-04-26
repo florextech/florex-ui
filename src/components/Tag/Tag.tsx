@@ -6,8 +6,8 @@ import { CloseIcon } from "../../utils/icons";
 const tagVariants = cva("inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium", {
   variants: {
     variant: {
-      subtle: "border border-[var(--border)] bg-[rgb(23_28_25/0.7)] text-[var(--muted)]",
-      solid: "bg-[var(--brand-600)] text-[#111513]",
+      subtle: "border border-(--border) bg-[rgb(23_28_25/0.7)] text-(--muted)",
+      solid: "bg-(--brand-600) text-[#111513]",
     },
   },
   defaultVariants: { variant: "subtle" },

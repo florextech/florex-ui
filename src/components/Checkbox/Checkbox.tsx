@@ -12,10 +12,10 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         ref={ref}
         id={id}
         type="checkbox"
-        className="size-4 rounded border-[var(--border)] bg-[var(--surface-muted)] text-[var(--brand-600)] accent-[var(--brand-600)] focus:ring-[var(--brand-600)]"
+        className="size-4 rounded border-(--border) bg-(--surface-muted) text-(--brand-600) accent-[var(--brand-600)] focus:ring-(--brand-600)"
         {...props}
       />
-      {label && <span className="text-sm text-[var(--foreground)]">{label}</span>}
+      {label && <span className="text-sm text-(--foreground)">{label}</span>}
     </label>
   ),
 );

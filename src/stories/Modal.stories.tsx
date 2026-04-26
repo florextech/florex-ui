@@ -15,10 +15,10 @@ export const Default: StoryObj = {
         <Button onClick={() => setOpen(true)}>Open Modal</Button>
         <Modal open={open} onClose={() => setOpen(false)}>
           <div className="flex items-start gap-3">
-            <Warning size={24} weight="fill" className="mt-0.5 shrink-0 text-[var(--warning)]" />
+            <Warning size={24} weight="fill" className="mt-0.5 shrink-0 text-(--warning)" />
             <div>
               <h2 className="mb-1 text-lg font-semibold">Confirm action</h2>
-              <p className="mb-4 text-sm text-[var(--muted)]">Are you sure you want to delete this bot? This action cannot be undone.</p>
+              <p className="mb-4 text-sm text-(--muted)">Are you sure you want to delete this bot? This action cannot be undone.</p>
             </div>
           </div>
           <div className="flex justify-end gap-2">

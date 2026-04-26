@@ -43,7 +43,7 @@ function RadioItem({ value, label, className }: RadioItemProps) {
         onChange={() => ctx.onChange?.(value)}
         className="size-4 accent-[var(--brand-600)]"
       />
-      <span className="text-sm text-[var(--foreground)]">{label}</span>
+      <span className="text-sm text-(--foreground)">{label}</span>
     </label>
   );
 }

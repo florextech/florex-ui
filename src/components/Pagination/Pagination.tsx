@@ -16,7 +16,7 @@ function Pagination({ page, totalPages, onPageChange, className }: PaginationPro
         type="button"
         disabled={page <= 1}
         onClick={() => onPageChange(page - 1)}
-        className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-[var(--muted)] hover:text-[var(--foreground)] disabled:opacity-50"
+        className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-(--muted) hover:text-(--foreground) disabled:opacity-50"
       >
         <ChevronLeft size={14} /> Prev
       </button>
@@ -28,8 +28,8 @@ function Pagination({ page, totalPages, onPageChange, className }: PaginationPro
           className={cn(
             "size-8 rounded-lg text-sm transition-colors",
             p === page
-              ? "bg-[var(--brand-600)] text-[#111513] font-medium"
-              : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[rgb(255_255_255/0.05)]",
+              ? "bg-(--brand-600) text-[#111513] font-medium"
+              : "text-(--muted) hover:text-(--foreground) hover:bg-[rgb(255_255_255/0.05)]",
           )}
         >
           {p}
@@ -39,7 +39,7 @@ function Pagination({ page, totalPages, onPageChange, className }: PaginationPro
         type="button"
         disabled={page >= totalPages}
         onClick={() => onPageChange(page + 1)}
-        className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-[var(--muted)] hover:text-[var(--foreground)] disabled:opacity-50"
+        className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-(--muted) hover:text-(--foreground) disabled:opacity-50"
       >
         Next <ChevronRight size={14} />
       </button>

@@ -10,7 +10,7 @@ const cardVariants = cva(
         default: "",
         muted: "bg-[rgb(23_28_25/0.7)]",
         hover:
-          "transition-all hover:border-[rgb(157_223_75/0.48)] hover:shadow-[var(--shadow-glow)]",
+          "transition-all hover:border-[rgb(157_223_75/0.48)] hover:shadow-(--shadow-glow)",
       },
       padding: {
         none: "",
@@ -42,11 +42,11 @@ function CardHeader({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
 }
 
 function CardTitle({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) {
-  return <h3 className={cn("text-lg font-semibold tracking-tight text-[var(--foreground)]", className)} {...props} />;
+  return <h3 className={cn("text-lg font-semibold tracking-tight text-(--foreground)", className)} {...props} />;
 }
 
 function CardDescription({ className, ...props }: HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn("text-sm text-[var(--muted)]", className)} {...props} />;
+  return <p className={cn("text-sm text-(--muted)", className)} {...props} />;
 }
 
 function CardContent({ className, ...props }: HTMLAttributes<HTMLDivElement>) {

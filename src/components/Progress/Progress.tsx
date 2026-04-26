@@ -16,10 +16,10 @@ function Progress({ value, size = "md", className }: ProgressProps) {
       aria-valuenow={clamped}
       aria-valuemin={0}
       aria-valuemax={100}
-      className={cn("w-full overflow-hidden rounded-full bg-[var(--surface-muted)]", sizes[size], className)}
+      className={cn("w-full overflow-hidden rounded-full bg-(--surface-muted)", sizes[size], className)}
     >
       <div
-        className="h-full rounded-full bg-[var(--brand-600)] transition-all"
+        className="h-full rounded-full bg-(--brand-600) transition-all"
         style={{ width: `${clamped}%` }}
       />
     </div>

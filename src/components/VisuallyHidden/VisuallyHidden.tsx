@@ -4,7 +4,7 @@ interface VisuallyHiddenProps {
   children: ReactNode;
 }
 
-function VisuallyHidden({ children }: VisuallyHiddenProps) {
+function VisuallyHidden({ children }: Readonly<VisuallyHiddenProps>) {
   return <span className="sr-only">{children}</span>;
 }
 

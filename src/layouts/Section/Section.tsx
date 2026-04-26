@@ -25,12 +25,12 @@ function Section({ eyebrow, title, description, glow, className, children, ...pr
         {(eyebrow || title || description) && (
           <div className="mb-12 max-w-2xl">
             {eyebrow && (
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--brand-700)]">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-700)">
                 {eyebrow}
               </p>
             )}
             {title && <h2 className="text-3xl font-bold sm:text-4xl">{title}</h2>}
-            {description && <p className="mt-4 text-[var(--muted)]">{description}</p>}
+            {description && <p className="mt-4 text-(--muted)">{description}</p>}
           </div>
         )}
         {children}

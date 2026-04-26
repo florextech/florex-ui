@@ -19,19 +19,19 @@ export const StatusPage: StoryObj = {
   render: () => (
     <Card padding="none" className="max-w-sm divide-y divide-[var(--border)]">
       <div className="flex items-center justify-between px-5 py-3">
-        <span className="text-sm text-[var(--muted)]">API</span>
+        <span className="text-sm text-(--muted)">API</span>
         <Status value="success">Operational</Status>
       </div>
       <div className="flex items-center justify-between px-5 py-3">
-        <span className="text-sm text-[var(--muted)]">Database</span>
+        <span className="text-sm text-(--muted)">Database</span>
         <Status value="warning">Slow queries</Status>
       </div>
       <div className="flex items-center justify-between px-5 py-3">
-        <span className="text-sm text-[var(--muted)]">CDN</span>
+        <span className="text-sm text-(--muted)">CDN</span>
         <Status value="danger">Down</Status>
       </div>
       <div className="flex items-center justify-between px-5 py-3">
-        <span className="text-sm text-[var(--muted)]">Monitoring</span>
+        <span className="text-sm text-(--muted)">Monitoring</span>
         <Status value="neutral">Pending</Status>
       </div>
     </Card>

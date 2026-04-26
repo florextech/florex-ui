@@ -10,21 +10,21 @@ describe("Badge", () => {
 
   it("applies brand tone", () => {
     render(<Badge tone="brand">New</Badge>);
-    expect(screen.getByText("New")).toHaveClass("text-[var(--brand-700)]");
+    expect(screen.getByText("New")).toHaveClass("text-(--brand-700)");
   });
 
   it("applies danger tone", () => {
     render(<Badge tone="danger">Error</Badge>);
-    expect(screen.getByText("Error")).toHaveClass("text-[var(--danger)]");
+    expect(screen.getByText("Error")).toHaveClass("text-(--danger)");
   });
 
   it("applies warning tone", () => {
     render(<Badge tone="warning">Beta</Badge>);
-    expect(screen.getByText("Beta")).toHaveClass("text-[var(--warning)]");
+    expect(screen.getByText("Beta")).toHaveClass("text-(--warning)");
   });
 
   it("defaults to neutral", () => {
     render(<Badge>Default</Badge>);
-    expect(screen.getByText("Default")).toHaveClass("text-[var(--muted)]");
+    expect(screen.getByText("Default")).toHaveClass("text-(--muted)");
   });
 });

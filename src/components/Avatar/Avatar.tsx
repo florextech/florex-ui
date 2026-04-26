@@ -20,7 +20,7 @@ function Avatar({ src, name, size = "md", className }: AvatarProps) {
   ) : (
     <span
       className={cn(
-        "inline-flex items-center justify-center rounded-full bg-[rgb(189_241_70/0.15)] font-medium text-[var(--brand-700)]",
+        "inline-flex items-center justify-center rounded-full bg-[rgb(189_241_70/0.15)] font-medium text-(--brand-700)",
         sizes[size],
         className,
       )}

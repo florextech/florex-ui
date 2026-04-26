@@ -5,10 +5,10 @@ import { cn } from "../../utils/cn";
 const textVariants = cva("", {
   variants: {
     variant: {
-      default: "text-[var(--foreground)]",
-      muted: "text-[var(--muted)]",
-      brand: "text-[var(--brand-700)]",
-      danger: "text-[var(--danger)]",
+      default: "text-(--foreground)",
+      muted: "text-(--muted)",
+      brand: "text-(--brand-700)",
+      danger: "text-(--danger)",
     },
     size: {
       xs: "text-xs",

@@ -17,9 +17,9 @@ function Steps({ children, current, className }: StepsProps) {
             <div
               className={cn(
                 "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs font-medium",
-                i < current && "border-[var(--brand-600)] bg-[var(--brand-600)] text-[var(--bg)]",
-                i === current && "border-[var(--brand-600)] text-[var(--brand-700)]",
-                i > current && "border-[var(--border)] text-[var(--muted)]",
+                i < current && "border-(--brand-600) bg-(--brand-600) text-(--bg)",
+                i === current && "border-(--brand-600) text-(--brand-700)",
+                i > current && "border-(--border) text-(--muted)",
               )}
             >
               {i < current ? "✓" : i + 1}
@@ -27,7 +27,7 @@ function Steps({ children, current, className }: StepsProps) {
             <div className="mt-2 text-center">{child}</div>
           </div>
           {i < items.length - 1 && (
-            <div className={cn("mt-4 h-px flex-1", i < current ? "bg-[var(--brand-600)]" : "bg-[var(--border)]")} />
+            <div className={cn("mt-4 h-px flex-1", i < current ? "bg-(--brand-600)" : "bg-(--border)")} />
           )}
         </div>
       ))}
@@ -38,8 +38,8 @@ function Steps({ children, current, className }: StepsProps) {
 function Step({ title, description }: { title: string; description?: string }) {
   return (
     <div className="px-1">
-      <p className="text-xs font-medium text-[var(--foreground)]">{title}</p>
-      {description && <p className="text-xs text-[var(--muted)]">{description}</p>}
+      <p className="text-xs font-medium text-(--foreground)">{title}</p>
+      {description && <p className="text-xs text-(--muted)">{description}</p>}
     </div>
   );
 }

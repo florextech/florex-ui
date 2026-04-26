@@ -20,7 +20,8 @@
   "scripts": {
     "build": "tsup && cp src/themes/florex.css dist/florex.css",
     "dev": "tsup --watch",
-    "lint": "eslint src/",
+    "lint": "eslint src/ && node scripts/tailwind-canonical.mjs",
+    "lint:fix": "eslint src/ --fix && node scripts/tailwind-canonical.mjs --fix",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
