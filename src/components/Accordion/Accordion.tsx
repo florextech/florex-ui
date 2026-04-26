@@ -1,16 +1,13 @@
 import { type ReactNode } from "react";
 import { cn } from "../../utils/cn";
+import { ChevronDown } from "../../utils/icons";
 
 function Accordion({ children, className }: { children: ReactNode; className?: string }) {
   return <div className={cn("divide-y divide-[var(--border)]", className)}>{children}</div>;
 }
 
 function AccordionItem({ children, className }: { children: ReactNode; className?: string }) {
-  return (
-    <details className={cn("group", className)}>
-      {children}
-    </details>
-  );
+  return <details className={cn("group", className)}>{children}</details>;
 }
 
 function AccordionTrigger({ children, className }: { children: ReactNode; className?: string }) {
@@ -22,7 +19,7 @@ function AccordionTrigger({ children, className }: { children: ReactNode; classN
       )}
     >
       {children}
-      <span className="transition-transform group-open:rotate-180">▾</span>
+      <span className="transition-transform group-open:rotate-180"><ChevronDown size={14} /></span>
     </summary>
   );
 }

@@ -1,4 +1,5 @@
 import { cn } from "../../utils/cn";
+import { ChevronLeft, ChevronRight } from "../../utils/icons";
 
 interface PaginationProps {
   page: number;
@@ -15,9 +16,9 @@ function Pagination({ page, totalPages, onPageChange, className }: PaginationPro
         type="button"
         disabled={page <= 1}
         onClick={() => onPageChange(page - 1)}
-        className="rounded-lg px-2 py-1 text-sm text-[var(--muted)] hover:text-[var(--foreground)] disabled:opacity-50"
+        className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-[var(--muted)] hover:text-[var(--foreground)] disabled:opacity-50"
       >
-        ← Prev
+        <ChevronLeft size={14} /> Prev
       </button>
       {pages.map((p) => (
         <button
@@ -38,9 +39,9 @@ function Pagination({ page, totalPages, onPageChange, className }: PaginationPro
         type="button"
         disabled={page >= totalPages}
         onClick={() => onPageChange(page + 1)}
-        className="rounded-lg px-2 py-1 text-sm text-[var(--muted)] hover:text-[var(--foreground)] disabled:opacity-50"
+        className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-[var(--muted)] hover:text-[var(--foreground)] disabled:opacity-50"
       >
-        Next →
+        Next <ChevronRight size={14} />
       </button>
     </nav>
   );

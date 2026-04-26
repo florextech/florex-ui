@@ -12,7 +12,7 @@ describe("Pagination", () => {
 
   it("disables prev on first page", () => {
     render(<Pagination page={1} totalPages={3} onPageChange={() => {}} />);
-    expect(screen.getByText("← Prev")).toBeDisabled();
+    expect(screen.getByText("Prev").closest("button")).toBeDisabled();
   });
 
   it("calls onPageChange on click", () => {

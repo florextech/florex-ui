@@ -1,6 +1,7 @@
 import { type ReactNode } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../utils/cn";
+import { CloseIcon } from "../../utils/icons";
 
 const tagVariants = cva("inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium", {
   variants: {
@@ -24,7 +25,7 @@ function Tag({ children, onClose, variant, className }: TagProps) {
       {children}
       {onClose && (
         <button type="button" onClick={onClose} aria-label="Remove" className="ml-0.5 hover:opacity-70">
-          ✕
+          <CloseIcon size={12} />
         </button>
       )}
     </span>
