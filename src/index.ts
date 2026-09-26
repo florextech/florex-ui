@@ -58,5 +58,11 @@ export { spacing } from "./tokens/spacing";
 export { radius } from "./tokens/radius";
 export { shadows } from "./tokens/shadows";
 
+// Glass Components
+export { GlassCard, glassCardVariants, type GlassCardProps } from "./components/GlassCard/GlassCard";
+export { GlassButton, glassButtonVariants, type GlassButtonProps } from "./components/GlassButton/GlassButton";
+export { StatusPill, statusPillVariants, type StatusPillProps } from "./components/StatusPill/StatusPill";
+export { AnimatedGradientBackground, type AnimatedGradientBackgroundProps } from "./components/AnimatedGradientBackground/AnimatedGradientBackground";
+
 // Utils
 export { cn } from "./utils/cn";

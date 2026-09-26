@@ -13,7 +13,8 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./florex.css": "./dist/florex.css"
+    "./florex.css": "./dist/florex.css",
+    "./florex-glass.css": "./dist/florex-glass.css"
   },
   "files": [
     "dist",
@@ -21,7 +22,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsup && cp src/themes/florex.css dist/florex.css",
+    "build": "tsup && cp src/themes/florex.css dist/florex.css && cp src/themes/florex-glass.css dist/florex-glass.css",
     "dev": "tsup --watch",
     "lint": "eslint src/ && node scripts/tailwind-canonical.mjs",
     "lint:fix": "eslint src/ --fix && node scripts/tailwind-canonical.mjs --fix",

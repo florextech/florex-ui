@@ -1,0 +1,67 @@
+/* @florex/ui — Florex Glass Theme
+   Glassmorphism + floral accents + VisionOS-inspired */
+
+:root {
+  --bg: #09090b;
+  --surface: rgba(17, 21, 19, 0.6);
+  --surface-elevated: rgba(23, 28, 25, 0.7);
+  --foreground: #edf6ee;
+  --muted: #8b9a8e;
+  --border: rgba(189, 241, 70, 0.08);
+  --border-hover: rgba(189, 241, 70, 0.2);
+
+  --brand-900: #f4ffe9;
+  --brand-700: #d7ff6d;
+  --brand-600: #bdf146;
+  --brand-500: #9ddf4b;
+  --brand-300: #76b73d;
+
+  --accent-rose: rgba(244, 114, 182, 0.15);
+  --accent-lavender: rgba(167, 139, 250, 0.12);
+  --accent-mint: rgba(52, 211, 153, 0.1);
+
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --success: #bdf146;
+  --info: #60a5fa;
+
+  --font-montserrat: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 0 1px rgba(189, 241, 70, 0.1), 0 20px 40px -20px rgba(157, 223, 75, 0.3);
+
+  --blur-glass: 20px;
+  --blur-heavy: 40px;
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  background: rgba(189, 241, 70, 0.25);
+  color: var(--brand-900);
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 5%, var(--accent-mint), transparent 30%),
+    radial-gradient(circle at 90% 5%, var(--accent-lavender), transparent 25%),
+    radial-gradient(circle at 50% 95%, var(--accent-rose), transparent 30%),
+    var(--bg);
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat);
+}
