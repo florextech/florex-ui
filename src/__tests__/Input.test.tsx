@@ -22,4 +22,10 @@ describe("Input", () => {
     render(<Input type="password" data-testid="inp" />);
     expect(screen.getByTestId("inp")).toHaveAttribute("type", "password");
   });
+
+  it("styles native date and time controls", () => {
+    render(<Input type="datetime-local" data-testid="schedule" />);
+    expect(screen.getByTestId("schedule")).toHaveAttribute("type", "datetime-local");
+    expect(screen.getByTestId("schedule")).toHaveClass("tabular-nums");
+  });
 });

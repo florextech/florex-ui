@@ -1,3 +1,8 @@
+
+## 0.1.4
+
+- Style native `date`, `time`, and `datetime-local` inputs with the Florex dark theme, tabular numerals, and a clear calendar trigger.
+
 # Changelog
 
 ## 0.1.1 (2026-04-26)

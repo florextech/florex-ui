@@ -7,3 +7,7 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = { args: { placeholder: "Enter your email" } };
 export const Disabled: Story = { args: { placeholder: "Disabled", disabled: true } };
+
+export const DateTime: Story = {
+  args: { type: "datetime-local", "aria-label": "Programar fecha y hora" },
+};
